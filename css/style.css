@@ -41,12 +41,11 @@ p {
 .top-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem;
 }
 
 .nav-block {
-  display: none;
+  visibility: hidden;
   background: var(--clr-blue);
 }
 
@@ -67,5 +66,6 @@ p {
 }
 
 .hide {
-  display: block;
+  /* display: block; */
+  visibility: show;
 }
