@@ -1,0 +1,71 @@
+@import url(./mediaqueries.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-red: #e06c75;
+  --clr-blue: #56b6c2;
+  --clr-yellow: #e5c07b;
+
+  --clr-light: #fcfcfc;
+  --clr-dark: #1e2222;
+
+  --space-sm: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 1.3rem;
+
+  --font-xl: clamp(1.85rem, 3.5vw, 3.2rem); /* H1 */
+  --font-l: clamp(1.75rem, 3.5vw, 2.4rem); /* H2 */
+  --font-m: clamp(1.45rem, 3.5vw, 1.3rem); /* H3 */
+  --font-s: clamp(1.3rem, 3.5vw, 1rem);
+}
+
+body {
+  font-family: "Schibsted Grotesk", sans-serif;
+  background: var(--clr-dark);
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--clr-light);
+}
+
+/**** Header ****/
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-block {
+  display: none;
+  background: var(--clr-blue);
+}
+
+.nav-link {
+  font-size: var(--font-s);
+  color: var(--clr-light);
+  text-decoration: none;
+}
+
+.nav-burger {
+  font-size: 1.5rem;
+  color: var(--clr-light);
+}
+
+.page-logo-image {
+  min-width: 240px;
+  width: 300px;
+}
+
+.hide {
+  display: block;
+}
