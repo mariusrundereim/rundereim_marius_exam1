@@ -100,12 +100,49 @@ p {
   border-radius: var(--radius-m);
 }
 
-.card-image {
-  /* max-width: 250px; */
+
+
+.carousel-indicator {
+  border: 2px solid gray;
+  padding: 3px;
+  border-radius: 50px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
 }
 
 .circle {
-  width: 40px;
-  height: 40px;
-  background: white;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+.circle-active {
+  background: var(--clr-blue);
+}
+
+.circle-inactive {
+  background: var(--clr-light);
+  opacity: 0.3;
+}
+
+.test {
+  border: 3px solid yellow;
+}
+
+.post-card {
+  text-decoration: none;
+  padding: 5px;
+
+}
+
+.post-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
