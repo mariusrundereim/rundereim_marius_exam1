@@ -22,6 +22,9 @@
   --font-l: clamp(1.75rem, 3.5vw, 2.4rem); /* H2 */
   --font-m: clamp(1.45rem, 3.5vw, 1.3rem); /* H3 */
   --font-s: clamp(1.3rem, 3.5vw, 1rem);
+
+  --radius-s: 3px;
+  --radius-m: 6px;
 }
 
 body {
@@ -38,6 +41,10 @@ p {
 
 /**** Header ****/
 
+.primary-header {
+  position: relative;
+}
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -45,8 +52,22 @@ p {
 }
 
 .nav-block {
-  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 50svh;
+  width: 100%;
+  z-index: 10;
+  display: none;
   background: var(--clr-blue);
+}
+
+.nav-burger {
+  z-index: 1000;
+}
+
+.nav-item {
+  list-style: none;
 }
 
 .nav-link {
@@ -61,11 +82,30 @@ p {
 }
 
 .page-logo-image {
-  min-width: 240px;
-  width: 300px;
+  height: 40px;
 }
 
 .hide {
-  /* display: block; */
-  visibility: show;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Home */
+
+.image-prop {
+  width: 100%;
+  border-radius: var(--radius-m);
+}
+
+.card-image {
+  /* max-width: 250px; */
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: white;
 }
