@@ -36,6 +36,13 @@
   --trans-1: 100ms ease;
 }
 
+.light-mode {
+  --clr-red: red;
+  --clr-blue: blue;
+  --clr-light: var(--clr-dark);
+  --clr-dark: var(--clr-light);
+}
+
 body {
   font-family: "Schibsted Grotesk", sans-serif;
   background: var(--clr-dark);

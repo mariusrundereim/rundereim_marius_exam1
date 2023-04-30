@@ -1,3 +1,13 @@
+/* Toggle Light Dark Mode */
+
+.toggle-button {
+  cursor: pointer;
+  aria-label: "Togggle to dark mode";
+  font-size: 2rem;
+  background: red;
+  padding: 0.4rem;
+}
+
 /* Arrows */
 
 .arrow-btn {
