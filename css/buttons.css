@@ -21,6 +21,23 @@
   color: var(--clr-light);
 }
 
+.btn-tags {
+  font-size: var(--font-m);
+  color: var(--clr-light);
+  padding: 5px 8px;
+  border: 1px solid var(--clr-dark-2);
+  border-radius: var(--space-sm);
+}
+
+.btn-tags:hover {
+  color: var(--clr-blue);
+}
+
+.btn-prop {
+  display: inline-block;
+  text-decoration: none;
+}
+
 /* Icons */
 
 .scroll-top-icon {

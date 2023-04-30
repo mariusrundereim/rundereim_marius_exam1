@@ -4,8 +4,14 @@
 }
 
 .section-title {
+  margin-bottom: 2rem;
+}
+
+.layout-1 {
   display: flex;
   align-items: baseline;
+}
+
+.space-bet {
   justify-content: space-between;
-  margin-bottom: 2rem;
 }
