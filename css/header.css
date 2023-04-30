@@ -1,0 +1,48 @@
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 50svh;
+  width: 100%;
+  z-index: 10;
+  display: none;
+  background: var(--clr-blue);
+}
+
+.nav-burger {
+  z-index: 1000;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  font-size: var(--font-s);
+  color: var(--clr-light);
+  text-decoration: none;
+}
+
+.nav-burger {
+  font-size: 1.5rem;
+  color: var(--clr-light);
+}
+
+.page-logo-image {
+  height: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

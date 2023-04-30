@@ -1,4 +1,7 @@
 @import url(./mediaqueries.css);
+@import url(./header.css);
+@import url(./buttons.css);
+@import url(./layout.css);
 
 * {
   margin: 0;
@@ -25,12 +28,16 @@
 
   --radius-s: 3px;
   --radius-m: 6px;
+
+  --trans-1: 100ms ease;
 }
 
 body {
   font-family: "Schibsted Grotesk", sans-serif;
   background: var(--clr-dark);
 }
+
+/* Fonts */
 
 h1,
 h2,
@@ -39,68 +46,20 @@ p {
   color: var(--clr-light);
 }
 
-/**** Header ****/
-
-.primary-header {
-  position: relative;
+.title-font {
+  font-size: var(--font-l);
 }
 
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+.card-title {
+  font-size: var(--font-m);
 }
 
-.nav-block {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-height: 50svh;
-  width: 100%;
-  z-index: 10;
-  display: none;
-  background: var(--clr-blue);
-}
-
-.nav-burger {
-  z-index: 1000;
-}
-
-.nav-item {
-  list-style: none;
-}
-
-.nav-link {
-  font-size: var(--font-s);
-  color: var(--clr-light);
-  text-decoration: none;
-}
-
-.nav-burger {
-  font-size: 1.5rem;
-  color: var(--clr-light);
-}
-
-.page-logo-image {
-  height: 40px;
-}
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-/* Home */
+/****** HOME ******/
 
 .image-prop {
   width: 100%;
   border-radius: var(--radius-m);
 }
-
-
 
 .carousel-indicator {
   border: 2px solid gray;
@@ -114,35 +73,31 @@ p {
   gap: var(--space-sm);
 }
 
-.circle {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-}
-
-.circle-active {
-  background: var(--clr-blue);
-}
-
-.circle-inactive {
-  background: var(--clr-light);
-  opacity: 0.3;
-}
-
-.test {
-  border: 3px solid yellow;
-}
-
-.post-card {
+.post-card-inner {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
-  padding: 5px;
-
+  min-height: 35rem;
 }
 
 .post-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
+/****** FOOTER ******/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  min-height: 20rem;
+}
+
+.scroll-to-top {
+  display: flex;
+  gap: 5px;
 }

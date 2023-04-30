@@ -35,28 +35,47 @@
             src="./images/sv_logo_white.svg"
             alt="Page logo"
         /></a>
-        <i class="fa-solid fa-bars nav-burger"></i>
+        <div class="nav-burger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        
       </div>
       <div class="nav-block">
+        <div class="search-menu">
+          <label for="search">
+          </label>
+          <input type="text">
+        </div>
+        
         <nav class="primary-nav">
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
           </ul>
         </nav>
         <div class="display-mode">
-          <p>Light Dark mode</p>
-          <i class="fa-solid fa-toggle-off"></i>
+          <h3>Display</h3>
+          <div>
+            <p>Light Dark mode</p>
+            <i class="fa-solid fa-toggle-off"></i>
+          </div>
+          
         </div>
       </div>
     </header>
-    <main>
+    <main class="main-wrapper">
       <section>
-        <h1>Latest posts</h1>
+        
+        <div class="section-title">
+          <h1 class="title-font">Latest posts</h1>
+        </div>
+        
+        
 
-        <article class="test">
+        <article class="latest-posts">
+          <!--
           <a class="post-card" href="#">
             <img
               class="card-image image-prop"
@@ -72,6 +91,7 @@
               Consectetur, possimus!
             </h3>
           </a>
+          -->
         </article>
         
           
@@ -83,6 +103,23 @@
           <div class="circle circle-inactive"></div>
         </div>
       </section>
+      
     </main>
+    <footer>
+      <img class="page-logo-image" src="./images/sv_logo_white.svg" alt="Logo - Stylevault">
+    <nav class="footer-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="scroll-to-top">
+      <i class="fa-solid fa-circle-arrow-up scroll-top-icon"></i>
+      <p>Scroll to top</p>
+    </div>
+    <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
+    </footer>
   </body>
 </html>

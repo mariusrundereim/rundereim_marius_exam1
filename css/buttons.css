@@ -1,0 +1,29 @@
+/* Icons */
+
+.scroll-top-icon {
+  font-size: 1.4rem;
+  color: var(--clr-light);
+  transition: var(--trans-1);
+}
+
+.scroll-top-icon:hover {
+  color: var(--clr-red);
+}
+
+/* Circles Carousel */
+
+.circle {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+}
+
+.circle-active {
+  background: var(--clr-blue);
+}
+
+.circle-inactive {
+  background: var(--clr-light);
+  opacity: 0.3;
+}
