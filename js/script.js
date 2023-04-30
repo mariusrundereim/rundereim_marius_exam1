@@ -44,7 +44,7 @@ const blogPost = [
 for (let i = 0; i < blogPost.length; i++) {
   console.log(blogPost[i]);
 
-  latestPosts.innerHTML += `
+  latestPosts.innerHTML = `
 
   <div class="post-card">
       <a class="post-card-inner" href="#">

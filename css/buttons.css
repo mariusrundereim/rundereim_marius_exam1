@@ -1,3 +1,26 @@
+/* Arrows */
+
+.arrow-btn {
+  padding: 0.7rem;
+  border-radius: var(--radius-s);
+  background: gray;
+  transition: var(--trans-1);
+}
+
+.arrow-btn:hover {
+  background: var(--clr-blue);
+}
+
+.arrow-btn:active {
+  background: white;
+}
+
+/* Links */
+
+.btn-link {
+  color: var(--clr-light);
+}
+
 /* Icons */
 
 .scroll-top-icon {

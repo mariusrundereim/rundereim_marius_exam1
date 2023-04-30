@@ -1,9 +1,11 @@
 .main-wrapper {
   width: min(100% - 2rem, 65rem);
   margin-inline: auto;
-  background: rgb(92, 92, 92);
 }
 
 .section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   margin-bottom: 2rem;
 }
