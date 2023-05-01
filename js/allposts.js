@@ -1,19 +1,20 @@
 import { blogPost } from "./data/exampleposts.js";
 
+console.log(blogPost)
 
 const buttonMore = document.querySelector(".btn-more")
+
 
 function displayPosts() {
     const allPosts = document.querySelector(".all-posts")
     
-
-    // Clear
-    allPosts.innerHTML = "";
+    //allPosts.innerHTML = "";
 
     // Loop 10 first
-    for(let i = 0; i < 10; i++){
-        const posts = allPosts[i]
-
+    for (let i = 0; i < 10; i++){
+        const posts = allPosts[i];
+        
+        console.log(posts)
 
         posts.innerHTML += `
         <div class="post-card">
@@ -35,8 +36,8 @@ function displayPosts() {
       `;
     }
 }
-
 displayPosts()
+
 
 /*
 

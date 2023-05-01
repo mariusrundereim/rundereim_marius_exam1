@@ -8,6 +8,18 @@
   padding: 0.4rem;
 }
 
+/* Show more */
+
+.btn-more {
+  cursor: pointer;
+  font-size: var(--font-m);
+  color: var(--clr-light);
+  background: var(--clr-dark);
+  padding: 5px 10px;
+  border: none;
+  border-radius: var(--space-sm);
+}
+
 /* Arrows */
 
 .arrow-btn {

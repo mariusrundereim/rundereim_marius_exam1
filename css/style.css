@@ -112,6 +112,10 @@ p {
 
 /****** LIST OF POSTS ******/
 
+.search-details {
+  display: none;
+}
+
 .flex-end {
   display: flex;
   flex-wrap: wrap;
