@@ -1,15 +1,14 @@
 import { blogPost } from "./data/exampleposts.js";
 
-
-
-
-
-
+// Display all post
 function displayPosts(blogPost){
 
-  const container = document.querySelector(".all-posts")
+  const container = document.querySelector(".all-posts");
+
+  // Clear
   container.innerHTML = '';
 
+  // Loop until 10 post
   for(let i = 0; i < 3; i++) {
     const post = blogPost[i];
     if(post) {
