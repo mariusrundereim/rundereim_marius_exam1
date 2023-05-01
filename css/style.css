@@ -112,6 +112,17 @@ p {
 
 /****** LIST OF POSTS ******/
 
+.post-card {
+  border: 1px dotted var(--clr-blue);
+  
+}
+
+.all-posts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
 .search-details {
   display: none;
 }
