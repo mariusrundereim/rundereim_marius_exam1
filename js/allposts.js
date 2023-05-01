@@ -1,67 +1,38 @@
 import { blogPost } from "./data/exampleposts.js";
 
-console.log(blogPost)
+
 
 const buttonMore = document.querySelector(".btn-more")
 
 
-function displayPosts() {
-    const allPosts = document.querySelector(".all-posts")
-    
-    //allPosts.innerHTML = "";
+function displayPosts(blogPost){
 
-    // Loop 10 first
-    for (let i = 0; i < 10; i++){
-        const posts = allPosts[i];
-        
-        console.log(posts)
+  const container = document.querySelector(".all-posts")
+  container.innerHTML = '';
 
-        posts.innerHTML += `
-        <div class="post-card">
-            <a class="post-card-inner" href="#">
-              <img
-              class="card-image image-prop"
-              src="${blogPost[i].cover}"
-              alt="image"
-            />
-            <div class="post-details">
-              <p>${blogPost[i].date}</p>
-              <p>3 min read</p>
-            </div>
-            <h3 class="card-title">
-              ${blogPost[i].title}
-            </h3>
-          </a>    
-        </div>   
-      `;
-    }
-}
-displayPosts()
-
-
-/*
-
-for (let i = 0; i < blogPost.length; i++) {
-  //console.log(blogPost[i]);
-
-  allPosts.innerHTML += `
-  <div class="post-card">
+  for(let i = 0; i < blogPost.length; i++) {
+    const post = blogPost[i];
+    if(post) {
+      container.innerHTML += `
+      <div class="post-card">
       <a class="post-card-inner" href="#">
         <img
         class="card-image image-prop"
-        src="${blogPost[i].cover}"
+        src="${post.cover}"
         alt="image"
       />
       <div class="post-details">
-        <p>${blogPost[i].date}</p>
+        <p>${post.date}</p>
         <p>3 min read</p>
       </div>
       <h3 class="card-title">
-        ${blogPost[i].title}
+        ${post.title}
       </h3>
     </a>    
-  </div>   
-`;
+  </div>
+      `
+    }
+    
+  }
 }
-
-*/
+displayPosts(blogPost)
