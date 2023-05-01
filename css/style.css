@@ -112,21 +112,34 @@ p {
 
 /****** LIST OF POSTS ******/
 
-.filter-container {
-  border: 1px solid red;
-  /* display: block; */
+.flex-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-m);
+}
+
+.post-found-font {
+  font-size: 1.4rem;
+  color: var(--clr-red);
+  font-weight: 300;
 }
 
 .filter-item {
-  border: 1px solid yellow;
   display: flex;
   align-items: center;
+  
   gap: var(--space-sm);
 
 }
 
 .search-field {
-  width: min(70% - 1rem, 44rem);
+  font-size: 1.1rem;
+  padding: 3px;
+  width: 100%;
+  border: 1px solid var(--clr-dark-2);
+  color: var(--clr-light);
+  background: var(--clr-dark);
 }
 
 /* Arrows */
