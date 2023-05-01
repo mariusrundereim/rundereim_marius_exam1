@@ -1,24 +1,11 @@
 import { blogPost } from "./data/exampleposts.js";
 
-console.log(blogPost)
-
-const menuBurger = document.querySelector(".nav-burger");
-const navBlock = document.querySelector(".nav-block");
-
-menuBurger.addEventListener("click", () => {
-  console.log("clicked!");
-
-  navBlock.classList.toggle("show");
-});
-
-// Example posts
-
-const latestPosts = document.querySelector(".latest-posts");
+const allPosts = document.querySelector(".all-posts")
 
 for (let i = 0; i < blogPost.length; i++) {
   //console.log(blogPost[i]);
 
-  latestPosts.innerHTML = `
+  allPosts.innerHTML = `
 
   <div class="post-card">
       <a class="post-card-inner" href="#">
@@ -36,8 +23,6 @@ for (let i = 0; i < blogPost.length; i++) {
       </h3>
     </a>    
   </div>
-      
+          
 `;
 }
-
-
