@@ -1,5 +1,5 @@
 .main-wrapper {
-  width: min(100% - 2rem, 65rem);
+  width: min(100% - 2rem, 80rem);
   margin-inline: auto;
   /* display: flex; */
   flex-grow: 1;
