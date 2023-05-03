@@ -1,19 +1,21 @@
 let displayTheme = localStorage.getItem("displayTheme");
 const themeBtnToggle = document.querySelector(".toggle-button");
 
-
 function enableLightMode() {
   document.body.classList.add("light-mode");
   localStorage.setItem("displayTheme", "enabled");
 }
-enableLightMode()
 
-
-function disableLightMode(){
+function disableLightMode() {
   document.body.classList.remove("light-mode");
   localStorage.setItem("displayTheme", null);
 }
-disableLightMode()
+
+if (displayTheme == "enabled") {
+  enableLightMode();
+} else {
+  disableLightMode();
+}
 
 themeBtnToggle.addEventListener("click", () => {
   displayTheme = localStorage.getItem("displayTheme");
@@ -23,3 +25,5 @@ themeBtnToggle.addEventListener("click", () => {
     disableLightMode();
   }
 });
+
+// en funksjon som setter themet
