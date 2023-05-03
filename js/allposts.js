@@ -1,4 +1,52 @@
-import { blogPost } from "./data/exampleposts.js";
+const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
+
+async function getPosts() {
+  const response = await fetch(url);
+  const data = await response.json();
+  //console.log(data);
+  getResult(data);
+}
+getPosts();
+
+function getResult(data) {
+  const container = document.querySelector(".all-posts");
+
+  container.innerHTML = "";
+
+  for (let i = 0; i < 10; i++) {
+    const post = data[i];
+    if (post) {
+      container.innerHTML += `
+      <div class="post-card">
+        <a class="post-card-inner" href="specificpage.html?id=${data[i].id}">
+          <img 
+              class="card-image image-prop"
+              src="${post.acf.src}"
+              alt="image"
+          />
+        <div class="post-details">
+            <p>${post.date}</p>
+            <p><span>${post.acf.reading_time}</span> min read</p>
+        </div>
+          <h3 class="card-title">
+              ${post.title.rendered}
+          </h3>
+        </a>    
+      </div>
+      `;
+    }
+  }
+}
+
+// Show more
+
+const buttonMore = document.querySelector(".btn-more");
+
+buttonMore.addEventListener("click", () => {
+  console.log("click");
+});
+
+/*
 
 // Display all post
 function displayPosts(blogPost) {
@@ -66,3 +114,5 @@ buttonMore.addEventListener("click", () => {
       `;
   }
 });
+
+*/

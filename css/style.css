@@ -170,6 +170,12 @@ p {
   background: var(--clr-dark);
 }
 
+.show-more {
+  display: grid;
+  place-content: center;
+  min-height: 5rem;
+}
+
 /* Specific Page */
 
 .post-title {
