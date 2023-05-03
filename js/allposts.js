@@ -1,17 +1,16 @@
 import { blogPost } from "./data/exampleposts.js";
 
 // Display all post
-function displayPosts(blogPost){
-
+function displayPosts(blogPost) {
   const container = document.querySelector(".all-posts");
 
   // Clear
-  container.innerHTML = '';
+  container.innerHTML = "";
 
   // Loop until 10 post
-  for(let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     const post = blogPost[i];
-    if(post) {
+    if (post) {
       container.innerHTML += `
       <div class="post-card">
       <a class="post-card-inner" href="#">
@@ -29,24 +28,22 @@ function displayPosts(blogPost){
       </h3>
     </a>    
   </div>
-      `
+      `;
     }
   }
 }
-displayPosts(blogPost)
-
-
+displayPosts(blogPost);
 
 // Show more
 
-const buttonMore = document.querySelector(".btn-more")
+const buttonMore = document.querySelector(".btn-more");
 
 buttonMore.addEventListener("click", () => {
-  const container = document.querySelector(".all-posts")
+  const container = document.querySelector(".all-posts");
 
   container.innerHTML = "";
 
-  for(let i = 0; i < blogPost.length; i++) {
+  for (let i = 0; i < blogPost.length; i++) {
     const post = blogPost[i];
 
     container.innerHTML += `
@@ -66,7 +63,6 @@ buttonMore.addEventListener("click", () => {
       </h3>
     </a>    
   </div>
-      `
-
+      `;
   }
-})
+});

@@ -1,43 +1,39 @@
-import { blogPost } from "./data/exampleposts.js";
+const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=12`;
 
-console.log(blogPost)
+async function getPosts() {
+  const response = await fetch(url);
+  const data = await response.json();
+  //console.log(data);
+  getResult(data);
+}
+getPosts();
 
-const menuBurger = document.querySelector(".nav-burger");
-const navBlock = document.querySelector(".nav-block");
+function getResult(data) {
+  console.log(data);
+  const latestPosts = document.querySelector(".latest-posts");
 
-menuBurger.addEventListener("click", () => {
-  console.log("clicked!");
-
-  navBlock.classList.toggle("show");
-});
-
-// Example posts
-
-const latestPosts = document.querySelector(".latest-posts");
-
-for (let i = 0; i < blogPost.length; i++) {
-  //console.log(blogPost[i]);
-
-  latestPosts.innerHTML = `
-
-  <div class="post-card">
-      <a class="post-card-inner" href="#">
+  for (let i = 0; i < data.length; i++) {
+    //console.log(data[i].title.rendered);
+    //console.log(data[i].acf.src);
+    //console.log(data[i].date);
+    //console.log(data[i].content.rendered);
+    latestPosts.innerHTML = `
+    <div class="post-card">
+      <a class="post-card-inner" href="specificpage.html?id=${data[i].id}">
         <img
         class="card-image image-prop"
-        src="${blogPost[i].cover}"
+        src="${data[i].acf.src}"
         alt="image"
       />
       <div class="post-details">
-        <p>${blogPost[i].date}</p>
+        <p>${data[i].date}</p>
         <p>3 min read</p>
       </div>
       <h3 class="card-title">
-        ${blogPost[i].title}
+        ${data[i].title.rendered}
       </h3>
     </a>    
-  </div>
-      
-`;
+  </div> 
+    `;
+  }
 }
-
-

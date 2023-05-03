@@ -11,6 +11,12 @@ function disableLightMode() {
   localStorage.setItem("displayTheme", null);
 }
 
+function saveDisplayTheme() {
+  localStorage.setItem("displayTheme", displayTheme);
+}
+
+window.onbeforeunload = saveDisplayTheme;
+
 if (displayTheme == "enabled") {
   enableLightMode();
 } else {
@@ -25,5 +31,3 @@ themeBtnToggle.addEventListener("click", () => {
     disableLightMode();
   }
 });
-
-// en funksjon som setter themet
