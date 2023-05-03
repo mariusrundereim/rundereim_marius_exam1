@@ -170,6 +170,25 @@ p {
   background: var(--clr-dark);
 }
 
+/* Specific Page */
+
+.post-title {
+  font-size: var(--font-xl);
+  color: var(--clr-red);
+}
+
+.post-content h2 {
+  font-size: var(--font-m);
+  color: var(--clr-light);
+}
+
+.post-content p {
+  color: var(--clr-light);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
 /* Arrows */
 
 .arrows-container {

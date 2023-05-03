@@ -14,8 +14,13 @@ async function displayPost() {
 displayPost();
 
 function showContent(data) {
-  console.log(data.title.rendered);
+  //console.log(data.title.rendered);
+  console.log(data.acf.reading_time);
   return (document.querySelector("main").innerHTML += `
-  <h1>${data.title.rendered}<h1>
+  <img class="image-prop" src="${data.acf.src}" alt="data.acf.alt_text">
+  <p>${data.date}</p>
+  <p><span>${data.acf.reading_time}</span> min read</p>
+  <h1 class="post-title">${data.title.rendered}<h1>
+  <div class="post-content">${data.content.rendered}</div>
   `);
 }
