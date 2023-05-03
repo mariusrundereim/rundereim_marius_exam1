@@ -5,13 +5,14 @@ async function getPosts() {
   const data = await response.json();
   //console.log(data);
   getResult(data);
+  searchByTitle(data);
 }
 getPosts();
 
 function getResult(data) {
   const container = document.querySelector(".all-posts");
 
-  container.innerHTML = "";
+  //container.innerHTML = "";
 
   for (let i = 0; i < 10; i++) {
     const post = data[i];
@@ -116,3 +117,20 @@ buttonMore.addEventListener("click", () => {
 });
 
 */
+
+// Search
+
+const buttonSubmit = document.querySelector("#button-submit");
+
+function searchByTitle(data) {
+  //console.log(data.title.rendered);
+  for (let i = 0; i < data.length; i++) {
+    const searchBar = document.querySelector("#search-posts");
+    const title = data[i].title.rendered;
+    console.log(title);
+
+    searchBar.addEventListener("keyup", () => {
+      console.log(searchBar.value);
+    });
+  }
+}

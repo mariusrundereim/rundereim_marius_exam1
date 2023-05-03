@@ -13,10 +13,6 @@ function getResult(data) {
   const latestPosts = document.querySelector(".latest-posts");
 
   for (let i = 0; i < data.length; i++) {
-    //console.log(data[i].title.rendered);
-    //console.log(data[i].acf.src);
-    //console.log(data[i].date);
-    //console.log(data[i].content.rendered);
     latestPosts.innerHTML = `
     <div class="post-card">
       <a class="post-card-inner" href="specificpage.html?id=${data[i].id}">
