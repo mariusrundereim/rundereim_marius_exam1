@@ -43,27 +43,4 @@ function postCarousel(data) {
       latestPosts.appendChild(card);
     }
   }
-
-  /*
-  for (let i = 0; i < data.length; i++) {
-    latestPosts.innerHTML = `
-    <div class="post-card">
-      <a class="post-card-inner" href="specificpage.html?id=${data[i].id}">
-        <img
-        class="card-image image-prop"
-        src="${data[i].acf.src}"
-        alt="image"
-      />
-      <div class="post-details">
-        <p>${data[i].date}</p>
-        <p>3 min read</p>
-      </div>
-      <h3 class="card-title">
-        ${data[i].title.rendered}
-      </h3>
-    </a>    
-  </div> 
-    `;
-  }
-  */
 }
