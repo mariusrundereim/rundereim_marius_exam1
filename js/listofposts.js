@@ -4,6 +4,9 @@ let allPosts = [];
 
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
 
+const searchBar = document.querySelector("#search-bar");
+const content = document.querySelector(".all-posts");
+
 async function allBlogPosts() {
   const response = await fetch(url);
   const data = await response.json();
