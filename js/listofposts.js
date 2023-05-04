@@ -12,6 +12,9 @@ async function allBlogPosts() {
   const data = await response.json();
   allPosts = data;
   console.log(allPosts);
+  console.log(allPosts.length + " " + "results of posts");
+
+  document.title = "Stylevault" + " - " + "All Posts";
 
   searchByTitle(allPosts);
   displayPosts(allPosts);
