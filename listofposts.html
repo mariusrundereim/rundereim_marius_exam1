@@ -30,7 +30,7 @@
   </head>
   <body>
     <header class="primary-header">
-      <div class="top-header">
+      <div class="top-header main-wrapper">
         <a href="index.html"
           ><img
             class="page-logo-image"
@@ -78,7 +78,8 @@
       <section>
         <div class="search-field">
           <form>
-            <input type="text" class="search-field" id="#search-bar" />
+            <label for="search-bar">Search</label>
+            <input type="text" id="search-bar" />
           </form>
         </div>
 
@@ -125,10 +126,6 @@
         </div>
       </section>
       <section>
-        <form>
-          <label for="search-bar">Search</label>
-          <input type="text" id="search-bar" />
-        </form>
         <article class="all-posts"></article>
         <div class="show-more">
           <button class="btn-more btn-prop" type="button">Show more</button>
