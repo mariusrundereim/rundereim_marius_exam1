@@ -24,7 +24,7 @@
       crossorigin="anonymous"
     ></script>
     <!--Scripts-->
-    <script defer src="./js/script.js" type="module"></script>
+    <script defer src="./js/carousel.js"></script>
     <script defer src="./js/header.js"></script>
     <script defer src="./js/lightmode.js"></script>
   </head>
@@ -40,19 +40,21 @@
         <div class="nav-burger">
           <i class="fa-solid fa-bars"></i>
         </div>
-        
       </div>
       <div class="nav-block">
         <div class="search-menu">
-          <label for="search">
-          </label>
-          <input type="text">
+          <label for="search"> </label>
+          <input type="text" />
         </div>
-        
+
         <nav class="primary-nav">
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="listofposts.html">Gallery</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listofposts.html">Gallery</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
           </ul>
@@ -63,39 +65,38 @@
             <p>Light Dark mode</p>
             <i class="fa-solid fa-toggle-off toggle-button"></i>
           </div>
-          
         </div>
       </div>
     </header>
     <main class="main-wrapper">
+      <!-- Hero -->
       <section class="hero">
-        <h1 class="hero-title">Get better knowledge in Cascading Style Sheet(CSS)</h1>
+        <h1 class="hero-title">
+          Get better knowledge in Cascading Style Sheet(CSS)
+        </h1>
 
         <form>
-          <input type="text" class="search-field">
+          <input type="text" class="search-field" />
           <button type="submit">Search</button>
         </form>
-        
       </section>
+      <!-- Title -->
       <section>
-        
         <div class="section-title space-bet">
           <h1 class="title-font">Latest posts</h1>
-          <a class="btn-link" href="#">View all</a>
+          <a class="btn-link" href="listofposts.html">View all</a>
         </div>
-        
-        
 
-        <div class="arrows-container">
-          <i class="fa-solid fa-arrow-left arrow-btn arrow-prev"></i>
-          <i class="fa-solid fa-arrow-right arrow-btn arrow-next"></i>
-        </div>
-        <article class="latest-posts">
-          
-        </article>
-        
-          
-        </a>
+        <section class="carousel">
+          <div class="carousel-content"></div>
+          <div class="carousel-navigation">
+            <i class="fa-solid fa-arrow-left arrow-btn arrow-prev"></i>
+            <i class="fa-solid fa-arrow-right arrow-btn arrow-next"></i>
+          </div>
+        </section>
+
+        <article class="latest-posts"></article>
+
         <div class="carousel-indicator">
           <div class="circle circle-active"></div>
           <div class="circle circle-inactive"></div>
@@ -119,17 +120,28 @@
           <a class="btn-tags btn-prop" href="#">grid-area</a>
         </article>
       </section>
-      
     </main>
     <footer>
       <div class="footer-content">
-        <img class="page-logo-image" src="./images/svg/sv_logo_white.svg" alt="Logo - Stylevault">
+        <img
+          class="page-logo-image"
+          src="./images/svg/sv_logo_white.svg"
+          alt="Logo - Stylevault"
+        />
         <nav class="footer-nav">
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="listofposts.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listofposts.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Contact</a>
+            </li>
           </ul>
         </nav>
         <div class="scroll-to-top">
@@ -137,11 +149,10 @@
           <p>Scroll to top</p>
         </div>
       </div>
-      
-    <div class="footer-bottom">
-      <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
-    </div>
-    
+
+      <div class="footer-bottom">
+        <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
+      </div>
     </footer>
   </body>
 </html>
