@@ -184,6 +184,10 @@ p {
   min-height: 5rem;
 }
 
+.hide {
+  display: none;
+}
+
 /* Specific Page */
 
 .post-title {

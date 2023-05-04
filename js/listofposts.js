@@ -1,136 +1,70 @@
+let currentPage = 1;
+const postsPerPage = 10;
+let allPosts = [];
+
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
 
-async function getPosts() {
+async function allBlogPosts() {
   const response = await fetch(url);
   const data = await response.json();
-  //console.log(data);
-  getResult(data);
-  searchByTitle(data);
+  allPosts = data;
+  console.log(allPosts);
+
+  searchByTitle(allPosts);
+  displayPosts(allPosts);
 }
-getPosts();
+allBlogPosts();
 
-function getResult(data) {
-  const container = document.querySelector(".all-posts");
-
-  //container.innerHTML = "";
-
-  for (let i = 0; i < 10; i++) {
-    const post = data[i];
-    if (post) {
-      container.innerHTML += `
-      <div class="post-card">
-        <a class="post-card-inner" href="specificpage.html?id=${data[i].id}">
-          <img 
-              class="card-image image-prop"
-              src="${post.acf.src}"
-              alt="image"
-          />
-        <div class="post-details">
-            <p>${post.date}</p>
-            <p><span>${post.acf.reading_time}</span> min read</p>
-        </div>
-          <h3 class="card-title">
-              ${post.title.rendered}
-          </h3>
-        </a>    
-      </div>
-      `;
-    }
-  }
-}
-
-// Show more
-
-const buttonMore = document.querySelector(".btn-more");
-
-buttonMore.addEventListener("click", () => {
-  console.log("click");
-});
-
-/*
-
-// Display all post
-function displayPosts(blogPost) {
-  const container = document.querySelector(".all-posts");
-
-  // Clear
-  container.innerHTML = "";
-
-  // Loop until 10 post
-  for (let i = 0; i < 3; i++) {
-    const post = blogPost[i];
-    if (post) {
-      container.innerHTML += `
-      <div class="post-card">
-      <a class="post-card-inner" href="#">
-        <img
-        class="card-image image-prop"
-        src="${post.cover}"
-        alt="image"
-      />
-      <div class="post-details">
-        <p>${post.date}</p>
-        <p>3 min read</p>
-      </div>
-      <h3 class="card-title">
-        ${post.title}
-      </h3>
-    </a>    
-  </div>
-      `;
-    }
-  }
-}
-displayPosts(blogPost);
-
-// Show more
-
-const buttonMore = document.querySelector(".btn-more");
-
-buttonMore.addEventListener("click", () => {
-  const container = document.querySelector(".all-posts");
-
-  container.innerHTML = "";
-
-  for (let i = 0; i < blogPost.length; i++) {
-    const post = blogPost[i];
-
-    container.innerHTML += `
-      <div class="post-card">
-      <a class="post-card-inner" href="#">
-        <img
-        class="card-image image-prop"
-        src="${post.cover}"
-        alt="image"
-      />
-      <div class="post-details">
-        <p>${post.date}</p>
-        <p>3 min read</p>
-      </div>
-      <h3 class="card-title">
-        ${post.title}
-      </h3>
-    </a>    
-  </div>
-      `;
-  }
-});
-
-*/
-
-// Search
-
-const buttonSubmit = document.querySelector("#button-submit");
-
+// Search by title
 function searchByTitle(data) {
-  //console.log(data.title.rendered);
-  for (let i = 0; i < data.length; i++) {
-    const searchBar = document.querySelector("#search-posts");
-    const title = data[i].title.rendered;
-    console.log(title);
-
-    searchBar.addEventListener("keyup", () => {
-      console.log(searchBar.value);
+  const searchBar = document.querySelector("#search-bar");
+  searchBar.addEventListener("keyup", (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredPosts = data.filter((post) => {
+      return (
+        post.title.rendered.toLowerCase().includes(searchString) ||
+        post.acf.post_tags.toLowerCase().includes(searchString)
+      );
     });
+    console.log(filteredPosts);
+    displayPosts(filteredPosts);
+  });
+}
+
+function displayPosts(posts) {
+  const currentPosts = [];
+
+  for (let i = 0; i < currentPage * postsPerPage; i++) {
+    if (i >= posts.length) {
+      break;
+    }
+    currentPosts.push(posts[i]);
   }
+
+  const html = currentPosts
+    .map((post) => {
+      return `
+        <div class="card">
+          <h2>${post.title.rendered}</h2>
+          <img class="image-prop" src="${post.acf.src}" alt="">
+        </div>
+      `;
+    })
+    .join("");
+
+  document.querySelector(".all-posts").innerHTML = html;
+
+  // Add load more button
+  const totalPosts = posts.length;
+  const totalPage = Math.ceil(totalPosts / postsPerPage);
+  const loadMoreButton = document.querySelector(".btn-more");
+  if (currentPage < totalPage) {
+    loadMoreButton.style.display = "block";
+  } else {
+    loadMoreButton.style.display = "none";
+  }
+  loadMoreButton.addEventListener("click", () => {
+    currentPage++;
+    displayPosts(posts);
+  });
 }
