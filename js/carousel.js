@@ -37,7 +37,7 @@ function postCarousel(data) {
   for (let i = currentSlide; i < currentSlide + 3; i++) {
     const post = data[i];
 
-    const card = document.createElement("div");
+    const card = document.createElement("a");
     card.classList.add("post-card");
     const img = document.createElement("img");
     img.classList.add("image-prop");

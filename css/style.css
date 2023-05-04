@@ -103,18 +103,6 @@ p {
   border-radius: var(--radius-m);
 }
 
-.carousel-indicator {
-  border: 2px solid gray;
-  padding: 3px;
-  border-radius: 50px;
-  display: flex;
-  width: fit-content;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
 .latest-posts {
   display: flex;
   flex-direction: column;
