@@ -38,10 +38,14 @@
 }
 
 .light-mode {
-  --clr-red: red;
-  --clr-blue: blue;
+  --clr-red: #e06c75;
+  --clr-blue: #32adbd;
   --clr-light: var(--clr-dark);
   --clr-dark: var(--clr-light);
+
+  --clr-dark-1: rgb(61, 61, 61);
+  --clr-dark-2: rgb(138, 138, 138);
+  --clr-dark-3: rgb(199, 199, 199);
 }
 
 body {
@@ -120,6 +124,12 @@ body {
 h1,
 h2,
 h3,
+ul,
+ol,
+li,
+p,
+a,
+button,
 p {
   color: var(--clr-light);
 }
