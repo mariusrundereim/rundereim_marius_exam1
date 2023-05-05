@@ -41,6 +41,7 @@ function carouselNavigation(data) {
 
 function postCarousel(data) {
   latestPosts.innerHTML = "";
+
   for (let i = currentSlide; i < currentSlide + 3; i++) {
     const post = data[i];
 
