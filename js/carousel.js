@@ -10,14 +10,10 @@ async function getPosts() {
     carouselNavigation(data);
   } catch (error) {
     console.log("This is:", error);
-    document.querySelector("body").innerHTML = ``;
+    document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
+  } finally {
+    console.log("Code that will run no matter what");
   }
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  postCarousel(data);
-  carouselNavigation(data);
 }
 getPosts();
 
@@ -60,7 +56,7 @@ function postCarousel(data) {
     // Content
     img.src = post.acf.src;
     text.textContent = post.title.rendered;
-    card.href = `details.html?id=${post.id}`;
+    card.href = `specificpage.html?id=${post.id}`;
 
     // Append
 

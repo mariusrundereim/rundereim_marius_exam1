@@ -81,14 +81,15 @@ p {
 
 .carousel-content {
   display: flex;
+  gap: 1rem;
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
 .post-card {
-  flex: 0 0 33.33%;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .carousel-navigation {
