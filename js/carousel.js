@@ -46,22 +46,33 @@ function postCarousel(data) {
 
     // Create Elements
     const card = document.createElement("a");
-    const img = document.createElement("img");
-    const text = document.createElement("h3");
+    const cardImage = document.createElement("img");
+    const cardInfo = document.createElement("div");
+    const cardDate = document.createElement("p");
+    const cardReadingTime = document.createElement("p");
+    const cardTitle = document.createElement("h2");
 
     // classLists
     card.classList.add("post-card");
-    img.classList.add("image-prop");
+    cardInfo.classList.add("card-info");
+    cardDate.classList.add("date-prop");
+    cardReadingTime.classList.add("reading-time-prop");
+    cardImage.classList.add("image-prop");
 
     // Content
-    img.src = post.acf.src;
-    text.textContent = post.title.rendered;
+    cardDate.textContent = post.date.slice(0, 10);
+    cardReadingTime.textContent = `${post.acf.reading_time} min read`;
     card.href = `specificpage.html?id=${post.id}`;
+    cardImage.src = post.acf.src;
+    cardTitle.textContent = post.title.rendered;
 
     // Append
+    cardInfo.appendChild(cardReadingTime);
+    cardInfo.appendChild(cardDate);
 
-    card.appendChild(img);
-    card.appendChild(text);
+    card.appendChild(cardImage);
+    card.appendChild(cardInfo);
+    card.appendChild(cardTitle);
     latestPosts.appendChild(card);
   }
 }
