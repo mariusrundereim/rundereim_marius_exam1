@@ -54,6 +54,7 @@ function postCarousel(data) {
 
     // classLists
     card.classList.add("post-card");
+
     cardInfo.classList.add("card-info");
     cardDate.classList.add("date-prop");
     cardReadingTime.classList.add("reading-time-prop");
@@ -67,9 +68,8 @@ function postCarousel(data) {
     cardTitle.textContent = post.title.rendered;
 
     // Append
-    cardInfo.appendChild(cardReadingTime);
     cardInfo.appendChild(cardDate);
-
+    cardInfo.appendChild(cardReadingTime);
     card.appendChild(cardImage);
     card.appendChild(cardInfo);
     card.appendChild(cardTitle);

@@ -90,6 +90,14 @@ p {
 .post-card {
   cursor: pointer;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
 }
 
 .carousel-navigation {
