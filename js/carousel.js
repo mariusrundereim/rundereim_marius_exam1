@@ -1,6 +1,17 @@
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
 
 async function getPosts() {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+
+    postCarousel(data);
+    carouselNavigation(data);
+  } catch (error) {
+    console.log("This is:", error);
+    document.querySelector("body").innerHTML = ``;
+  }
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
@@ -37,13 +48,22 @@ function postCarousel(data) {
   for (let i = currentSlide; i < currentSlide + 3; i++) {
     const post = data[i];
 
+    // Create Elements
     const card = document.createElement("a");
-    card.classList.add("post-card");
     const img = document.createElement("img");
-    img.classList.add("image-prop");
-    img.src = post.acf.src;
     const text = document.createElement("h3");
+
+    // classLists
+    card.classList.add("post-card");
+    img.classList.add("image-prop");
+
+    // Content
+    img.src = post.acf.src;
     text.textContent = post.title.rendered;
+    card.href = `details.html?id=${post.id}`;
+
+    // Append
+
     card.appendChild(img);
     card.appendChild(text);
     latestPosts.appendChild(card);

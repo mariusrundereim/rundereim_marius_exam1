@@ -81,13 +81,14 @@ p {
 
 .carousel-content {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
 .post-card {
   flex: 0 0 33.33%;
+  cursor: pointer;
 }
 
 .carousel-navigation {
