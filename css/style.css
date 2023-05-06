@@ -228,6 +228,13 @@ p {
   gap: var(--space-l);
 }
 
+.blogpost-img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+}
+
 .search-details {
   display: none;
 }
@@ -295,4 +302,10 @@ p {
 .arrows-container {
   display: flex;
   justify-content: space-between;
+}
+
+/* Utilities */
+
+.a-reset {
+  text-decoration: none;
 }

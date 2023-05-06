@@ -58,10 +58,17 @@ function displayPosts(posts) {
   const html = currentPosts
     .map((post) => {
       return `
-        <div class="card">
-          <h2>${post.title.rendered}</h2>
-          <img class="image-prop" src="${post.acf.src}" alt="">
+      <a class="a-reset" href="specificpage.html?id=${post.id}">
+      <img class="blogpost-img" src="${post.acf.src}" alt="${
+        post.acf.alt_text
+      }">
+        <div class="card-info">
+          <p><span>${post.acf.reading_time}</span> min read</p>
+          <p class="date-prop">${post.date.slice(0, 10)}</p>
         </div>
+        <h2>${post.title.rendered}</h2>
+      </a>
+        
       `;
     })
     .join("");
