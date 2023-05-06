@@ -62,9 +62,17 @@
 
 /* Icons */
 
+.scroll-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
 .scroll-top-icon {
   font-size: 1.4rem;
   color: var(--clr-light);
+  padding: 0.5rem;
+  border-radius: var(--radius-s);
   transition: var(--trans-1);
 }
 
