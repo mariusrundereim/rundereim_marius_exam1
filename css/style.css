@@ -297,6 +297,49 @@ p {
   margin-bottom: 1rem;
 }
 
+/****** CONTACT ******/
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+label {
+  color: var(--clr-light);
+}
+
+input {
+  display: block;
+  padding: 5px;
+  color: var(--clr-light);
+  border: 2px solid var(--clr-dark-3);
+  border-radius: var(--radius-s);
+  background: var(--clr-dark);
+}
+
+input:focus {
+  color: var(--clr-dark-1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  display: block;
+  color: var(--clr-light);
+  border: 2px solid var(--clr-dark-3);
+  border-radius: var(--radius-s);
+  background: var(--clr-dark);
+}
+
+.textfield {
+  width: min(100%, 25rem);
+}
+
+.textfield-message {
+  width: min(100%, 25rem);
+  min-height: 10rem;
+}
+
 /* Arrows */
 
 .arrows-container {

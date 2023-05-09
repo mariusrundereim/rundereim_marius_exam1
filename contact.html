@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StyleVault - Home</title>
+    <title>Contact</title>
     <meta
       name="description"
       content="StyleCrafters is a CSS tips and tricks blog website. Homepage shows latest posts"
@@ -25,7 +25,6 @@
     ></script>
     <!--Scripts-->
     <script defer src="./js/global.js"></script>
-    <script defer src="./js/carousel.js"></script>
     <script defer src="./js/header.js"></script>
     <script defer src="./js/lightmode.js"></script>
   </head>
@@ -42,9 +41,7 @@
           <li class="nav-item">
             <a class="nav-link" href="listofposts.html">List of posts</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
       </nav>
       <div class="header-options">
@@ -57,56 +54,37 @@
       </div>
     </header>
     <main class="main-wrapper">
-      <!-- Hero -->
-      <section class="hero">
-        <h1 class="hero-title">
-          Get better knowledge in Cascading Style Sheet(CSS).
-        </h1>
-      </section>
-      <!-- Title -->
-      <section>
-        <div class="section-title space-bet">
-          <h1 class="title-font">Latest posts</h1>
-          <a class="btn-link" href="listofposts.html">View all</a>
+      <h1>Contact</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi assumenda
+        iste itaque.
+      </p>
+      <form class="form-contact">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" class="textfield" name="name" />
         </div>
-        <!-- Carousel -->
-        <section class="carousel">
-          <div class="carousel-content">
-            <!-- Loader -->
-            <div class="loader-dots-container">
-              <div class="loader">
-                <div class="loader-dot-1"></div>
-                <div class="loader-dot-2"></div>
-              </div>
-              <div class="loader-text">
-                <p>Loading..</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-navigation">
-            <i class="fa-solid fa-arrow-left arrow-btn arrow-prev"></i>
-            <i class="fa-solid fa-arrow-right arrow-btn arrow-next"></i>
-          </div>
-        </section>
-      </section>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" class="textfield" id="email" name="email" />
+        </div>
+        <div>
+          <label for="subject">Subject:</label>
+          <input type="text" class="textfield" name="textfield" id="subject" />
+        </div>
+        <div>
+          <label for="message">Message:</label>
 
-      <section>
-        <div class="section-title">
-          <h1 class="title-font">Popular tags</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <textarea
+            name="message"
+            class="textfield-message"
+            id="message"
+          ></textarea>
         </div>
-        <article>
-          <a class="btn-tags btn-prop" href="listofposts.html">display: flex</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">object-fit</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">::before</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">flex-basis</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">flex-grow</a>
-          <a class="btn-tags btn-prop" href="listofposts.html"
-            >grid-template-columns</a
-          >
-          <a class="btn-tags btn-prop" href="listofposts.html">grid-area</a>
-        </article>
-      </section>
+        <div>
+          <button class="button-submit" type="submit">Send</button>
+        </div>
+      </form>
     </main>
     <footer>
       <div class="footer-content">
