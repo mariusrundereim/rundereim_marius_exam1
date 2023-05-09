@@ -1,3 +1,103 @@
+/* New CSS */
+
+.top-header {
+  display: flex;
+  align-items: stretch;
+  min-height: 3rem;
+}
+
+.pagelogo {
+  flex-grow: 1;
+  align-self: center;
+  z-index: 10;
+}
+
+.site-logo {
+  height: 40px;
+}
+
+.primary-nav {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+.header-options {
+  min-width: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.lightdark-icon,
+.menu--icon {
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+
+.page-logo-image {
+  height: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background: rgb(176, 208, 182);
+  }
+
+  .top-header {
+    position: relative;
+  }
+
+  .primary-nav {
+    position: absolute;
+    inset: 3rem 0rem;
+    height: 100vh;
+
+    background: white;
+    min-height: 5rem;
+    transform: translateX(0%);
+  }
+
+  .menu-animation {
+    transform: translateX(100%);
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+}
+
+/* Old Header css */
+
+/*  
+
 .top-header {
   display: flex;
   align-items: center;
@@ -47,3 +147,5 @@
 .show {
   display: block;
 }
+
+*/

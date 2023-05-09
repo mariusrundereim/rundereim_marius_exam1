@@ -1,5 +1,5 @@
 let displayTheme = localStorage.getItem("displayTheme");
-const themeBtnToggle = document.querySelector(".toggle-button");
+const themeBtnToggle = document.querySelector(".lightdark-toggle");
 
 function enableLightMode() {
   document.body.classList.add("light-mode");

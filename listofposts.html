@@ -30,42 +30,27 @@
     <script defer src="./js/lightmode.js"></script>
   </head>
   <body>
-    <header class="primary-header">
-      <div class="top-header main-wrapper">
-        <a href="index.html"
-          ><img
-            class="page-logo-image"
-            src="./images/svg/sv_logo_white.svg"
-            alt="Page logo"
-        /></a>
-        <div class="nav-burger">
-          <i class="fa-solid fa-bars"></i>
+    <header class="top-header">
+      <a class="pagelogo" href="index.html"
+        ><img class="site-logo" src="/images/svg/sv_logo_white.svg" alt="" />
+      </a>
+      <nav class="primary-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listofposts.html">Gallery</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-options">
+        <div class="lightdark-toggle">
+          <i class="fas fa-sun toggle-lightdark lightdark-icon"></i>
         </div>
-      </div>
-      <div class="nav-block">
-        <div class="search-menu">
-          <label for="search"> </label>
-          <input type="text" />
-        </div>
-
-        <nav class="primary-nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="listofposts.html">Gallery</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="display-mode">
-          <h3>Display</h3>
-          <div>
-            <p>Light Dark mode</p>
-            <i class="fa-solid fa-toggle-off toggle-button"></i>
-          </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars toggle-menu-open menu--icon"></i>
         </div>
       </div>
     </header>
