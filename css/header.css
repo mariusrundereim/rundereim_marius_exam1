@@ -28,7 +28,7 @@
 }
 
 .nav-link {
-  color: black;
+  color: var(--clr-light);
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@
 
 .lightdark-icon,
 .menu--icon {
-  color: rgb(0, 0, 0);
+  color: var(--clr-light);
   font-size: 1.3rem;
 }
 
