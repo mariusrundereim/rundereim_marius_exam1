@@ -4,8 +4,11 @@ const email = document.querySelector("#email");
 const contactSubject = document.querySelector("#contact-subject");
 const contactMessage = document.querySelector("#contact-message");
 
+// Success or Error messages
 const messageName = document.querySelector("#contact-name");
 const messageEmail = document.querySelector("#email-display");
+const messageSubject = document.querySelector("#subject-display");
+const messageMessage = document.querySelector("#message-display");
 
 function showMessage(type, message) {
   const html = `<div class="message ${type}">${message}</div>`;
@@ -35,26 +38,26 @@ function checkContactForm() {
   if (email.value) {
     const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
     console.log(regEx.test(email.value));
+    messageEmail.innerHTML = showMessage("success", "Good");
   } else {
-    messageContainer.innerHTML = showMessage("error", "Email must be valid");
+    messageEmail.innerHTML = showMessage("error", "Email must be valid");
   }
 
   // Subject
   if (contactSubject.value.length >= 15) {
     console.log("More than 15 characters long");
+    messageSubject.innerHTML = showMessage("success", "Good");
   } else {
     console.log("Kortere");
-    messageContainer.innerHTML = showMessage("error", "Subject must be longer");
+    messageSubject.innerHTML = showMessage("error", "Subject must be shorter");
   }
 
   // Message
   if (contactMessage.value.length > 25) {
-    console.log("Mer enn 25 bokstaver langt");
+    //console.log("Mer enn 25 bokstaver langt");
+    messageMessage.innerHTML = showMessage("success", "Good goood");
   } else {
     console.log("Aaaaaltfor kort");
-    messageContainer.innerHTML = showMessage(
-      "error",
-      "Message should be longer"
-    );
+    messageMessage.innerHTML = showMessage("error", "Must be shorter");
   }
 }

@@ -1,6 +1,8 @@
 .main-wrapper {
   width: min(100% - 2rem, 80rem);
   margin-inline: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   /* display: flex; */
   flex-grow: 1;
 }

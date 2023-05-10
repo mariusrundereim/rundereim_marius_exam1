@@ -280,14 +280,26 @@ p {
 
 /* Specific Page */
 
+.post-info {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .post-title {
   font-size: var(--font-xl);
   color: var(--clr-red);
+
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .post-content h2 {
   font-size: var(--font-m);
   color: var(--clr-light);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .post-content p {
@@ -297,6 +309,11 @@ p {
   margin-bottom: 1rem;
 }
 
+.comment {
+  background: var(--clr-dark-2);
+  min-height: 10rem;
+  padding: 2rem;
+}
 /****** CONTACT ******/
 
 .form-contact {
