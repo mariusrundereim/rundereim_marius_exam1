@@ -3,7 +3,9 @@ const firstName = document.querySelector("#first-name");
 const email = document.querySelector("#email");
 const contactSubject = document.querySelector("#contact-subject");
 const contactMessage = document.querySelector("#contact-message");
-const messageContainer = document.querySelector(".message-container");
+
+const messageName = document.querySelector("#contact-name");
+const messageEmail = document.querySelector("#email-display");
 
 function showMessage(type, message) {
   const html = `<div class="message ${type}">${message}</div>`;
@@ -11,18 +13,19 @@ function showMessage(type, message) {
 }
 
 contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
   checkContactForm();
   showMessage();
-  event.preventDefault();
 });
 
 function checkContactForm() {
   //Name
   if (firstName.value.length >= 5) {
     console.log("navn finnes");
+    messageName.innerHTML = showMessage("success", "Goooood");
   } else {
     console.log("Trenger et lengre navn");
-    messageContainer.innerHTML = showMessage(
+    messageName.innerHTML = showMessage(
       "error",
       "Name must be more than 5 characters long"
     );

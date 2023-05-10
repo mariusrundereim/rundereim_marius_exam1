@@ -8,7 +8,7 @@ function enableLightMode() {
 
 function disableLightMode() {
   document.body.classList.remove("light-mode");
-  localStorage.setItem("displayTheme", null);
+  localStorage.setItem("displayTheme", "disabled");
 }
 
 function saveDisplayTheme() {
