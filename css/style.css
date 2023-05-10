@@ -325,6 +325,7 @@ input:focus {
 
 textarea {
   display: block;
+
   color: var(--clr-light);
   border: 2px solid var(--clr-dark-3);
   border-radius: var(--radius-s);
@@ -351,4 +352,31 @@ textarea {
 
 .a-reset {
   text-decoration: none;
+}
+
+/* Message */
+
+.message-container {
+  display: inline-block;
+
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.success {
+  color: black;
+  background: rgb(100, 225, 100);
+  /**/
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.error {
+  color: white;
+  background: rgb(236, 104, 104);
+  /**/
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
 }
