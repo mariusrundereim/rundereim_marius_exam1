@@ -11,13 +11,14 @@ async function displayPost() {
 
   document.title = "Stylevault" + " - " + data.title.rendered;
   showContent(data);
-  clickImage(data);
+  popUp(data);
 }
 displayPost();
 
 function showContent(data) {
   const date = data.date.slice(0, 10);
   return (document.querySelector(".blog-container").innerHTML += `
+  <div class="modal"></div>
   <img class="image-prop post-image-click" src="${data.acf.src}" alt="data.acf.alt_text">
   <div class="post-info">
     <p>${date}</p>
@@ -29,33 +30,21 @@ function showContent(data) {
   `);
 }
 
-function clickImage(data) {
-  const modal = document.querySelector("#modal-post");
-  const cancelButton = document.querySelector("#cancel-btn");
-  const imageClick = document.querySelector(".post-image-click");
-
-  imageClick.addEventListener("click", () => {
-    console.log("Image is clicked");
-    modal.showModal();
-    openCheck(modal);
+function popUp(data) {
+  const image = document.querySelector(".post-image-click");
+  const modalPop = document.querySelector(".modal");
+  image.addEventListener("click", () => {
+    modalPop.innerHTML = `
+    <div class="modal--container">
+      <div class="modal--img-container">
+        <img class="modal--image" src="${data.acf.src}" alt="">
+      </div>
+    </div>`;
   });
-
-  modal.innerHTML = `
-  <img class="image-full" src="${data.acf.src}" alt="">
-  <h3>Hello</h3>
-  <button id="cancel-btn" type="reset">Close</button>
-  `;
-
-  function openCheck(modal) {
-    if (modal.open) {
-      console.log("modal open");
-    } else {
-      console.log("modal closed");
+  modalPop.addEventListener("click", (e) => {
+    if (e.target.className !== "modal--image") {
+      modalPop.innerHTML = "";
     }
-  }
-
-  cancelButton.addEventListener("click", () => {
-    modal.close();
-    openCheck(modal);
   });
+  //
 }
