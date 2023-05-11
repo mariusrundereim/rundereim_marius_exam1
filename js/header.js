@@ -40,3 +40,18 @@ function toggleLightDark() {
     lightDarkMode = false;
   }
 }
+
+// Resize
+
+window.addEventListener("resize", () => {
+  resize();
+});
+
+function resize() {
+  if (window.innerWidth > 600) {
+    console.log("Lower than 600px");
+    menuToggle.classList.add("hide");
+  } else {
+    console.log("Mobile");
+  }
+}
