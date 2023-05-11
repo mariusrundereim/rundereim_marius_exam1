@@ -1,6 +1,7 @@
 @import url(./header.css);
 @import url(./buttons.css);
 @import url(./layout.css);
+@import url(./utilities.css);
 @import url(./mediaqueries.css);
 @import url(./footer.css);
 
@@ -268,16 +269,6 @@ p {
   background: var(--clr-dark);
 }
 
-.show-more {
-  display: grid;
-  place-content: center;
-  min-height: 5rem;
-}
-
-.hide {
-  display: none;
-}
-
 /* Specific Page */
 
 .post-info {
@@ -315,15 +306,6 @@ p {
   padding: 2rem;
 }
 
-.post-image-click {
-  cursor: pointer;
-}
-
-.image-full {
-  width: 400px;
-  object-fit: cover;
-}
-
 .modal--container {
   position: fixed;
   inset: 0rem;
@@ -353,33 +335,6 @@ p {
   gap: var(--space-m);
 }
 
-label {
-  color: var(--clr-light);
-}
-
-input {
-  display: block;
-  padding: 5px;
-  color: var(--clr-light);
-  border: 2px solid var(--clr-dark-3);
-  border-radius: var(--radius-s);
-  background: var(--clr-dark);
-}
-
-input:focus {
-  color: var(--clr-dark-1);
-  background: rgba(0, 0, 0, 0.2);
-}
-
-textarea {
-  display: block;
-
-  color: var(--clr-light);
-  border: 2px solid var(--clr-dark-3);
-  border-radius: var(--radius-s);
-  background: var(--clr-dark);
-}
-
 .textfield {
   width: min(100%, 25rem);
 }
@@ -387,44 +342,4 @@ textarea {
 .textfield-message {
   width: min(100%, 25rem);
   min-height: 10rem;
-}
-
-/* Arrows */
-
-.arrows-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Utilities */
-
-.a-reset {
-  text-decoration: none;
-}
-
-/* Message */
-
-.message-container {
-  display: inline-block;
-
-  border-radius: 3px;
-  margin-top: 5px;
-}
-
-.success {
-  color: black;
-  background: rgb(100, 225, 100);
-  /**/
-  display: inline-block;
-  padding: 5px;
-  border-radius: 3px;
-}
-
-.error {
-  color: white;
-  background: rgb(236, 104, 104);
-  /**/
-  display: inline-block;
-  padding: 5px;
-  border-radius: 3px;
 }

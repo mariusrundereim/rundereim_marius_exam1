@@ -1,0 +1,51 @@
+/* Message */
+
+.message-container {
+  display: inline-block;
+
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.success {
+  color: black;
+  background: rgb(100, 225, 100);
+  /**/
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.error {
+  color: white;
+  background: rgb(236, 104, 104);
+  /**/
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Arrows */
+
+.arrows-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* A-reset */
+
+.a-reset {
+  text-decoration: none;
+}
+
+/* Show & Hide */
+
+.show-more {
+  display: grid;
+  place-content: center;
+  min-height: 5rem;
+}
+
+.hide {
+  display: none;
+}

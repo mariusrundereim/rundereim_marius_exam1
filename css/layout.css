@@ -19,3 +19,43 @@
 .space-bet {
   justify-content: space-between;
 }
+
+/* Images */
+
+.post-image-click {
+  cursor: pointer;
+}
+
+.image-full {
+  width: 400px;
+  object-fit: cover;
+}
+
+/* Input fields */
+
+label {
+  color: var(--clr-light);
+}
+
+input {
+  display: block;
+  padding: 5px;
+  color: var(--clr-light);
+  border: 2px solid var(--clr-dark-3);
+  border-radius: var(--radius-s);
+  background: var(--clr-dark);
+}
+
+input:focus {
+  color: var(--clr-dark-1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  display: block;
+
+  color: var(--clr-light);
+  border: 2px solid var(--clr-dark-3);
+  border-radius: var(--radius-s);
+  background: var(--clr-dark);
+}
