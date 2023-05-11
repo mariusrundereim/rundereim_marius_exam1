@@ -2,7 +2,6 @@
 
 .top-level {
   display: flex;
-
   justify-content: space-between;
 }
 
@@ -35,11 +34,19 @@
 
 .nav-list {
   list-style: none;
-  border: 1px solid purple;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .primary-nav {
+    min-height: 20rem;
+  }
+  .nav-list {
+    flex-direction: column;
+  }
 }
 
 .nav-link {
@@ -81,35 +88,3 @@
 .show {
   display: block;
 }
-
-/* 
-
-@media screen and (max-width: 700px) {
-  body {
-    background: rgb(176, 208, 182);
-  }
-
-  .top-header {
-    position: relative;
-  }
-
-  .primary-nav {
-    position: absolute;
-    inset: 3rem 0rem;
-    height: 100vh;
-
-    background: white;
-    min-height: 5rem;
-    transform: translateX(0%);
-  }
-
-  .menu-animation {
-    transform: translateX(100%);
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-}
-
- */
