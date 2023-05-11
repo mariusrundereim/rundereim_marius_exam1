@@ -36,6 +36,8 @@
   --radius-m: 6px;
 
   --trans-1: 100ms ease;
+  --trans-2: 300ms ease;
+  --trans-3: 500ms ease;
 }
 
 .light-mode {
