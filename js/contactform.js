@@ -1,3 +1,6 @@
+// Title
+document.title += " - " + "Contact";
+
 const contactForm = document.querySelector(".form-contact");
 const firstName = document.querySelector("#first-name");
 const email = document.querySelector("#email");

@@ -8,7 +8,8 @@ console.log(url);
 async function displayPost() {
   const response = await fetch(url);
   const data = await response.json();
-  //console.log(data);
+
+  document.title = "Stylevault" + " - " + data.title.rendered;
   showContent(data);
 }
 displayPost();
