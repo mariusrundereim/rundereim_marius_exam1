@@ -18,7 +18,7 @@ async function getPosts() {
 getPosts();
 
 const latestPosts = document.querySelector(".carousel-content");
-let currentSlide = 0;
+let index = 0;
 
 // Function for carousel navigation
 
@@ -27,12 +27,18 @@ function carouselNavigation(data) {
   const nextBtn = document.querySelector(".arrow-next");
 
   prevBtn.addEventListener("click", () => {
-    currentSlide = Math.max(currentSlide - 3, 0);
+    index = index - 1;
+    if (index === -1) {
+      index = 3;
+    }
     postCarousel(data);
   });
 
   nextBtn.addEventListener("click", () => {
-    currentSlide = Math.min(currentSlide + 3, data.length - 3);
+    index = index + 1;
+    if (index === 4) {
+      index = 0;
+    }
     postCarousel(data);
   });
 }
@@ -42,7 +48,7 @@ function carouselNavigation(data) {
 function postCarousel(data) {
   latestPosts.innerHTML = "";
 
-  for (let i = currentSlide; i < currentSlide + 3; i++) {
+  for (let i = index; i < index + 3; i++) {
     const post = data[i];
 
     // Create Elements

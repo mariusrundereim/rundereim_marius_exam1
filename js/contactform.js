@@ -26,9 +26,10 @@ contactForm.addEventListener("submit", (event) => {
 
 function checkContactForm() {
   //Name
-  if (firstName.value.length >= 5) {
+  if (firstName.value.length > 5) {
     console.log("navn finnes");
-    messageName.innerHTML = showMessage("success", "Goooood");
+    //messageName.innerHTML = showMessage("success", "Goooood");
+    messageName.innerHTML = "";
   } else {
     console.log("Trenger et lengre navn");
     messageName.innerHTML = showMessage(
@@ -47,7 +48,7 @@ function checkContactForm() {
   }
 
   // Subject
-  if (contactSubject.value.length >= 15) {
+  if (contactSubject.value.length > 15) {
     console.log("More than 15 characters long");
     messageSubject.innerHTML = showMessage("success", "Good");
   } else {
@@ -60,7 +61,6 @@ function checkContactForm() {
     //console.log("Mer enn 25 bokstaver langt");
     messageMessage.innerHTML = showMessage("success", "Good goood");
   } else {
-    console.log("Aaaaaltfor kort");
     messageMessage.innerHTML = showMessage("error", "Must be shorter");
   }
 }

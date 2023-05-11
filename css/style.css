@@ -314,6 +314,16 @@ p {
   min-height: 10rem;
   padding: 2rem;
 }
+
+.post-image-click {
+  cursor: pointer;
+}
+
+.image-full {
+  width: 400px;
+  object-fit: cover;
+}
+
 /****** CONTACT ******/
 
 .form-contact {
