@@ -11,7 +11,7 @@ async function displayPost() {
 
   document.title = "Stylevault" + " - " + data.title.rendered;
   showContent(data);
-  popUp();
+  popUp(data);
 }
 displayPost();
 
@@ -30,15 +30,23 @@ function showContent(data) {
   `);
 }
 
-function popUp() {
+function popUp(data) {
   const image = document.querySelector(".post-image-click");
   const modalPop = document.querySelector(".modal");
   image.addEventListener("click", () => {
     console.log("Image clickable");
+
     modalPop.innerHTML = `
     <div class="modal--container">
-    <p>Keeeeeey</p>
+      <div class="modal--img-container">
+        <img class="modal--image" src="${data.acf.src}" alt="">
+      </div>
     </div>`;
+  });
+  modalPop.addEventListener("click", (e) => {
+    if (e.target.className !== "modal--image") {
+      modalPop.innerHTML = "none";
+    }
   });
   //
 }

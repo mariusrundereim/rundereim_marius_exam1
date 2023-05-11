@@ -327,9 +327,22 @@ p {
 .modal--container {
   position: fixed;
   inset: 0rem;
-  width: 100%;
-  height: 500px;
+  height: 95dvh;
+  display: grid;
+  place-content: center;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal--img-container {
+  width: min(100% - 1rem, 60rem);
+  margin-inline: auto;
+}
+
+.modal--image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /****** CONTACT ******/
