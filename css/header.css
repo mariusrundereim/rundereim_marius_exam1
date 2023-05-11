@@ -1,10 +1,19 @@
 /* New CSS */
 
+.top-level {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.header-wrap {
+  width: 100%;
+}
+
 .top-header {
   display: flex;
   align-items: stretch;
   min-height: 3rem;
-  padding: 10px;
 }
 
 .pagelogo {
@@ -18,17 +27,23 @@
 }
 
 .primary-nav {
-  flex-grow: 1;
+  display: grid;
   align-self: center;
+  background: var(--clr-blue);
+  min-height: 4rem;
 }
 
 .nav-list {
   list-style: none;
+  border: 1px solid purple;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
 .nav-link {
+  font-size: var(--font-m);
   color: var(--clr-light);
   text-decoration: none;
 }
@@ -67,6 +82,8 @@
   display: block;
 }
 
+/* 
+
 @media screen and (max-width: 700px) {
   body {
     background: rgb(176, 208, 182);
@@ -94,3 +111,5 @@
     flex-direction: column;
   }
 }
+
+ */
