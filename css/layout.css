@@ -7,12 +7,33 @@
   flex-grow: 1;
 }
 
-.main-wrapper-blogpost {
+.grid-wrapper {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  width: min(100% - 2rem, 98rem);
-  margin-inline: auto;
-  gap: var(--space-xl);
+  gap: 2rem;
+  grid-template-areas:
+    "content content content aside"
+    "comment comment comment aside";
+}
+
+@media screen and (max-width: 840px) {
+  .grid-wrapper {
+    grid-template-areas:
+      "content"
+      "aside"
+      "comment";
+  }
+}
+
+.blog-container {
+  grid-area: content;
+}
+
+.side--content {
+  grid-area: aside;
+}
+
+.post--comment {
+  grid-area: comment;
 }
 
 .section-title {
