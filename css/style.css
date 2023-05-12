@@ -26,6 +26,7 @@
   --space-sm: 0.5rem;
   --space-m: 1rem;
   --space-l: 1.3rem;
+  --space-xl: 2rem;
 
   --font-xl: clamp(1.85rem, 3.5vw, 3.2rem); /* H1 */
   --font-l: clamp(1.75rem, 3.5vw, 2.4rem); /* H2 */
@@ -153,14 +154,25 @@ p {
 .carousel {
   position: relative;
   width: 100%;
+  border: 2px solid red;
+  margin-bottom: var(--space-xl);
 }
 
 .carousel-content {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  gap: var(--space-l);
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  border: 1px dotted yellow;
+}
+
+@media screen and (max-width: 720px) {
+  .carousel-content {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
 }
 
 .post-card {
@@ -178,7 +190,7 @@ p {
 
 .carousel-navigation {
   position: absolute;
-  bottom: 1rem;
+  top: 1rem;
   right: 1rem;
 }
 
