@@ -1,10 +1,18 @@
 .main-wrapper {
-  width: min(100% - 2rem, 80rem);
+  width: min(100% - 2rem, 98rem);
   margin-inline: auto;
   margin-top: 5rem;
   margin-bottom: 5rem;
   /* display: flex; */
   flex-grow: 1;
+}
+
+.main-wrapper-blogpost {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: min(100% - 2rem, 98rem);
+  margin-inline: auto;
+  gap: var(--space-xl);
 }
 
 .section-title {
@@ -18,6 +26,16 @@
 
 .space-bet {
   justify-content: space-between;
+}
+
+/* Borders */
+
+.border-red {
+  border: 1px solid var(--clr-red);
+}
+
+.border-blue {
+  border: 1px solid var(--clr-blue);
 }
 
 /* Images */

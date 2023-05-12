@@ -329,6 +329,24 @@ p {
   border-radius: 8px;
 }
 
+/* Aside */
+
+.side--content {
+  position: sticky;
+  top: 10px;
+  border: 2px solid hotpink;
+}
+
+.aside--card {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 20rem;
+  padding: var(--space-m);
+  border-radius: var(--radius-m);
+}
+
 /****** CONTACT ******/
 
 .form-contact {

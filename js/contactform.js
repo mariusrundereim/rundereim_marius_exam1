@@ -6,6 +6,7 @@ const firstName = document.querySelector("#first-name");
 const email = document.querySelector("#email");
 const contactSubject = document.querySelector("#contact-subject");
 const contactMessage = document.querySelector("#contact-message");
+const contactSubmit = document.querySelector("#contact-submit");
 
 // Success or Error messages
 const messageName = document.querySelector("#contact-name");
@@ -63,4 +64,10 @@ function checkContactForm() {
   } else {
     messageMessage.innerHTML = showMessage("error", "Must be shorter");
   }
+
+  // Send
 }
+
+function formValidate() {}
+
+console.log(contactSubmit.disabled);
