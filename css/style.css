@@ -331,12 +331,6 @@ p {
 
 /* Aside */
 
-.side--content {
-  position: sticky;
-  top: 10px;
-  border: 2px solid hotpink;
-}
-
 .aside--card {
   position: sticky;
   display: flex;
