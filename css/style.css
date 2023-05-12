@@ -154,7 +154,6 @@ p {
 .carousel {
   position: relative;
   width: 100%;
-  border: 2px solid red;
   margin-bottom: var(--space-xl);
 }
 
@@ -165,7 +164,6 @@ p {
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  border: 1px dotted yellow;
 }
 
 @media screen and (max-width: 720px) {
@@ -190,8 +188,8 @@ p {
 
 .carousel-navigation {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: -5rem;
+  right: 0rem;
 }
 
 .image-prop {
