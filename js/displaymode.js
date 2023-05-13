@@ -1,4 +1,4 @@
-const themeBtnToggle = document.querySelector(".lightdark-toggle");
+const themeBtnToggle = document.querySelector(".lightdark");
 
 themeBtnToggle.addEventListener("click", () => {
   switchMode();
