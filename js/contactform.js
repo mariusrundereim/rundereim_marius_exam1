@@ -30,7 +30,6 @@ function checkContactForm() {
   if (firstName.value.length > 5) {
     console.log("navn finnes");
     messageName.innerHTML = "";
-    messageName.innerHTML = showMessage("success", "Goooood");
   } else {
     console.log("Trenger et lengre navn");
     messageName.innerHTML = showMessage(
@@ -43,8 +42,10 @@ function checkContactForm() {
   if (email.value) {
     const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
     console.log(regEx.test(email.value));
-    messageEmail.innerHTML = showMessage("success", "Good");
+    console.log("Email is valid");
+    messageEmail.innerHTML = "";
   } else {
+    console.log("Email not valid");
     messageEmail.innerHTML = showMessage(
       "error",
       "Must be a valid email address"
@@ -54,10 +55,9 @@ function checkContactForm() {
   // Subject
   if (contactSubject.value.length > 15) {
     console.log("Subject is correct");
-    messageName.innerHTML = "";
-    //messageName.innerHTML = showMessage("success", "Goooood");
+    messageSubject.innerHTML = "";
   } else {
-    console.log("Subject wrong");
+    console.log("Subject is too short");
     messageSubject.innerHTML = showMessage(
       "error",
       "Subject should be more than 15 characters long"
@@ -66,9 +66,10 @@ function checkContactForm() {
 
   // Message
   if (contactMessage.value.length > 25) {
-    messageName.innerHTML = "";
-    messageName.innerHTML = showMessage("success", "Goooood");
+    messageMessage.innerHTML = "";
+    console.log("Message is good");
   } else {
+    console.log("Few characters on message");
     messageMessage.innerHTML = showMessage(
       "error",
       "Message must be more than 25 characters long"
