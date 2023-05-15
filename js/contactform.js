@@ -1,7 +1,7 @@
 // Title
 document.title += " - " + "Contact";
 
-const contactForm = document.querySelector(".form-contact");
+const contactForm = document.querySelector("#contact-form");
 const firstName = document.querySelector("#first-name");
 const email = document.querySelector("#email");
 const contactSubject = document.querySelector("#contact-subject");
@@ -14,16 +14,16 @@ const messageEmail = document.querySelector("#email-display");
 const messageSubject = document.querySelector("#subject-display");
 const messageMessage = document.querySelector("#message-display");
 
-function showMessage(type, message) {
-  const html = `<div class="message ${type}">${message}</div>`;
-  return html;
-}
-
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
   checkContactForm();
   showMessage();
 });
+
+function showMessage(type, message) {
+  const html = `<div class="message ${type}">${message}</div>`;
+  return html;
+}
 
 function checkContactForm() {
   //Name
@@ -43,31 +43,32 @@ function checkContactForm() {
   if (email.value) {
     const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
     console.log(regEx.test(email.value));
-    messageEmail.innerHTML = showMessage("success", "Good");
+    //messageEmail.innerHTML = showMessage("success", "Good");
   } else {
-    messageEmail.innerHTML = showMessage("error", "Email must be valid");
+    messageEmail.innerHTML = showMessage(
+      "error",
+      "Must be a valid email address"
+    );
   }
 
   // Subject
   if (contactSubject.value.length > 15) {
-    console.log("More than 15 characters long");
-    messageSubject.innerHTML = showMessage("success", "Good");
   } else {
     console.log("Kortere");
-    messageSubject.innerHTML = showMessage("error", "Subject must be shorter");
+    messageSubject.innerHTML = showMessage(
+      "error",
+      "Subject should be more than 15 characters long"
+    );
   }
 
   // Message
   if (contactMessage.value.length > 25) {
-    //console.log("Mer enn 25 bokstaver langt");
-    messageMessage.innerHTML = showMessage("success", "Good goood");
   } else {
-    messageMessage.innerHTML = showMessage("error", "Must be shorter");
+    messageMessage.innerHTML = showMessage(
+      "error",
+      "Message must be more than 25 characters long"
+    );
   }
 
   // Send
 }
-
-function formValidate() {}
-
-console.log(contactSubmit.disabled);

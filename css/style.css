@@ -357,3 +357,7 @@ p {
   width: min(100%, 25rem);
   min-height: 10rem;
 }
+
+.c-requirements {
+  padding: var(--space-l);
+}

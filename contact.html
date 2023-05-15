@@ -71,48 +71,57 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi assumenda
         iste itaque.
       </p>
-      <form class="form-contact">
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" class="textfield" id="first-name" name="fname" />
-          <div id="contact-name"></div>
-        </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" class="textfield" id="email" name="email" />
-          <div id="email-display"></div>
-        </div>
-        <div>
-          <label for="subject">Subject:</label>
-          <input
-            type="text"
-            class="textfield"
-            name="textfield"
-            id="contact-subject"
-          />
-          <div id="subject-display"></div>
-        </div>
-        <div>
-          <label for="message">Message:</label>
+      <div class="grid-autofit">
+        <form class="form-contact" id="contact-form">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" class="textfield" id="first-name" name="fname" />
+            <div id="contact-name"></div>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" class="textfield" id="email" name="email" />
+            <div id="email-display"></div>
+          </div>
+          <div>
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              class="textfield"
+              name="textfield"
+              id="contact-subject"
+            />
+            <div id="subject-display"></div>
+          </div>
+          <div>
+            <label for="message">Message:</label>
 
-          <textarea
-            name="message"
-            class="textfield-message"
-            id="contact-message"
-          ></textarea>
-          <div id="message-display"></div>
+            <textarea
+              name="message"
+              class="textfield-message"
+              id="contact-message"
+            ></textarea>
+            <div id="message-display"></div>
+          </div>
+          <div>
+            <button class="button-submit" type="submit" id="contact-submit">
+              Send
+            </button>
+          </div>
+        </form>
+        <div class="c-requirements border-blue">
+          <h3>Requirements:</h3>
+          <p>
+            In this exam project, this is the requirements for this contact form
+          </p>
+          <ul>
+            <li>Name (Should be more than 5 characters long)</li>
+            <li>Email address (Must be a valid email address)</li>
+            <li>Subject (Should be more than 15 characters long)</li>
+            <li>Message content (Should be more than 25 characters long)</li>
+          </ul>
         </div>
-        <div>
-          <button
-            class="button-submit"
-            type="submit"
-            id="contact-submit"
-            disabled
-          >
-            Send
-          </button>
-        </div>
-      </form>
+      </div>
     </main>
     <footer>
       <div class="footer-content">
