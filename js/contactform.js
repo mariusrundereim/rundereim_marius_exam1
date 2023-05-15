@@ -29,8 +29,8 @@ function checkContactForm() {
   //Name
   if (firstName.value.length > 5) {
     console.log("navn finnes");
-    //messageName.innerHTML = showMessage("success", "Goooood");
     messageName.innerHTML = "";
+    messageName.innerHTML = showMessage("success", "Goooood");
   } else {
     console.log("Trenger et lengre navn");
     messageName.innerHTML = showMessage(
@@ -43,7 +43,7 @@ function checkContactForm() {
   if (email.value) {
     const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
     console.log(regEx.test(email.value));
-    //messageEmail.innerHTML = showMessage("success", "Good");
+    messageEmail.innerHTML = showMessage("success", "Good");
   } else {
     messageEmail.innerHTML = showMessage(
       "error",
@@ -53,8 +53,11 @@ function checkContactForm() {
 
   // Subject
   if (contactSubject.value.length > 15) {
+    console.log("Subject is correct");
+    messageName.innerHTML = "";
+    //messageName.innerHTML = showMessage("success", "Goooood");
   } else {
-    console.log("Kortere");
+    console.log("Subject wrong");
     messageSubject.innerHTML = showMessage(
       "error",
       "Subject should be more than 15 characters long"
@@ -63,6 +66,8 @@ function checkContactForm() {
 
   // Message
   if (contactMessage.value.length > 25) {
+    messageName.innerHTML = "";
+    messageName.innerHTML = showMessage("success", "Goooood");
   } else {
     messageMessage.innerHTML = showMessage(
       "error",
