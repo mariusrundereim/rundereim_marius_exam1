@@ -66,22 +66,32 @@
       </div>
     </header>
     <main class="main-wrapper">
-      <h1>Contact</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi assumenda
-        iste itaque.
-      </p>
-      <div class="grid-autofit">
+      <section>
+        <h1>Contact</h1>
+      </section>
+      <section class="grid-autofit">
+        <div class="col--1">
+          <h3>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+            voluptatem error beatae deleniti quos et earum veniam amet?
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, harum! Maiores labore voluptatum fuga modi, quam
+            perferendis vitae quo id!
+          </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
         <form class="form-contact" id="contact-form">
           <div>
             <label for="name">Name:</label>
             <input type="text" class="textfield" id="first-name" name="fname" />
-            <div id="contact-name"></div>
+            <div class="error-label" id="contact-name"></div>
           </div>
           <div>
             <label for="email">Email:</label>
             <input type="email" class="textfield" id="email" name="email" />
-            <div id="email-display"></div>
+            <div class="error-label" id="email-display"></div>
           </div>
           <div>
             <label for="subject">Subject:</label>
@@ -91,7 +101,7 @@
               name="textfield"
               id="contact-subject"
             />
-            <div id="subject-display"></div>
+            <div class="error-label" id="subject-display"></div>
           </div>
           <div>
             <label for="message">Message:</label>
@@ -101,7 +111,7 @@
               class="textfield-message"
               id="contact-message"
             ></textarea>
-            <div id="message-display"></div>
+            <div class="error-label" id="message-display"></div>
           </div>
           <div>
             <button class="button-submit" type="submit" id="contact-submit">
@@ -109,19 +119,7 @@
             </button>
           </div>
         </form>
-        <div class="c-requirements border-blue">
-          <h3>Requirements:</h3>
-          <p>
-            In this exam project, this is the requirements for this contact form
-          </p>
-          <ul>
-            <li>Name (Should be more than 5 characters long)</li>
-            <li>Email address (Must be a valid email address)</li>
-            <li>Subject (Should be more than 15 characters long)</li>
-            <li>Message content (Should be more than 25 characters long)</li>
-          </ul>
-        </div>
-      </div>
+      </section>
     </main>
     <footer>
       <div class="footer-content">

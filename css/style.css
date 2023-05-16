@@ -346,18 +346,38 @@ p {
 .form-contact {
   display: flex;
   flex-direction: column;
-  gap: var(--space-m);
+  gap: 2rem;
+
+  border-radius: var(--radius-m);
+  padding: var(--space-m);
+  min-height: 10rem;
+  border: 2px dotted hotpink;
 }
 
 .textfield {
-  width: min(100%, 25rem);
+  width: 100%;
 }
 
 .textfield-message {
-  width: min(100%, 25rem);
+  width: 100%;
   min-height: 10rem;
 }
 
 .c-requirements {
   padding: var(--space-l);
+}
+
+.error-label {
+  animation: pops-in 300ms;
+}
+
+@keyframes pops-in {
+  0% {
+    transform: rotate(0deg);
+    transform: scale(0);
+  }
+  100% {
+    transform: rotate(-2deg);
+    transform: scale(1);
+  }
 }

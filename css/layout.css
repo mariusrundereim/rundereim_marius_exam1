@@ -1,10 +1,11 @@
 .main-wrapper {
   width: min(100% - 2rem, 98rem);
   margin-inline: auto;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   /* display: flex; */
   flex-grow: 1;
+  border: 1px solid red;
 }
 
 .grid-wrapper {
@@ -26,7 +27,11 @@
 
 .grid-autofit {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.col--1 {
+  border: 2px solid red;
 }
 
 .blog-container {

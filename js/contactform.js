@@ -28,10 +28,13 @@ function showMessage(type, message) {
 function checkContactForm() {
   //Name
   if (firstName.value.length > 5) {
-    console.log("navn finnes");
     messageName.innerHTML = "";
+    const nameRegEx = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    return nameRegEx.test(firstName.value);
   } else {
     console.log("Trenger et lengre navn");
+
+    messageName.classList.add(".error-label");
     messageName.innerHTML = showMessage(
       "error",
       "Name must be more than 5 characters long"
