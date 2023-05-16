@@ -3,26 +3,7 @@
   margin-inline: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  /* display: flex; */
   flex-grow: 1;
-  border: 1px solid red;
-}
-
-.grid-wrapper {
-  display: grid;
-  gap: 2rem;
-  grid-template-areas:
-    "content content content aside"
-    "comment comment comment aside";
-}
-
-@media screen and (max-width: 840px) {
-  .grid-wrapper {
-    grid-template-areas:
-      "content"
-      "aside"
-      "comment";
-  }
 }
 
 .grid-autofit {
@@ -31,19 +12,14 @@
 }
 
 .col--1 {
-  border: 2px solid red;
-}
-
-.blog-container {
-  grid-area: content;
-}
-
-.side--content {
-  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
 }
 
 .post--comment {
-  grid-area: comment;
+  width: min(100% - 1rem, 44rem);
+  margin-inline: auto;
 }
 
 .section-title {

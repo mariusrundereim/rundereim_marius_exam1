@@ -302,10 +302,16 @@ p {
   margin-bottom: 1rem;
 }
 
-.comment {
+.comment-container {
   background: var(--clr-dark-2);
   min-height: 10rem;
   padding: 2rem;
+}
+
+.comment-item {
+  border: 1px solid var(--clr-dark-2);
+  border-radius: var(--radius-m);
+  padding: 1rem;
 }
 
 .modal--container {
@@ -346,12 +352,11 @@ p {
 .form-contact {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--space-l);
 
   border-radius: var(--radius-m);
   padding: var(--space-m);
-  min-height: 10rem;
-  border: 2px dotted hotpink;
+  /* min-height: 10rem; */
 }
 
 .textfield {
@@ -367,17 +372,15 @@ p {
   padding: var(--space-l);
 }
 
-.error-label {
-  animation: pops-in 300ms;
+.error-label-start {
+  visibility: hidden;
+  transform: rotate(0deg);
+  transform: scale(0);
+  transition: 1s;
 }
 
-@keyframes pops-in {
-  0% {
-    transform: rotate(0deg);
-    transform: scale(0);
-  }
-  100% {
-    transform: rotate(-2deg);
-    transform: scale(1);
-  }
+.error-label-show {
+  visibility: unset;
+  transform: rotate(-2deg);
+  transform: scale(1);
 }

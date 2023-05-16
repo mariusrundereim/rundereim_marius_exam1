@@ -34,7 +34,6 @@ function checkContactForm() {
   } else {
     console.log("Trenger et lengre navn");
 
-    messageName.classList.add(".error-label");
     messageName.innerHTML = showMessage(
       "error",
       "Name must be more than 5 characters long"

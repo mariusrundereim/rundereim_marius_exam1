@@ -67,67 +67,36 @@
     </header>
 
     <main class="main-wrapper">
-      <div class="grid-wrapper">
-        <section class="blog-container"></section>
-        <aside class="side--content">
-          <div class="aside--card border-red">
-            <h1>About</h1>
+      <section class="blog-container"></section>
+      <section class="post--comment">
+        <h2>Leave a comment</h2>
+        <form class="comment-container">
+          <div>
+            <label for="name">Name</label>
+            <input class="textfield" type="text" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input class="textfield" type="email" />
+          </div>
+          <div>
+            <label for="comment">Comment:</label>
+            <textarea class="textfield-message" name="" id=""></textarea>
+          </div>
+          <button class="button-submit" type="submit">Send</button>
+        </form>
+        <div class="comment-items">
+          <div class="comment-item">
+            <h3>First name</h3>
+            <p>16.05.2023</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-              cupiditate non sapiente neque facere nemo nulla, hic in ut dolore
-              repellendus porro placeat aliquam expedita incidunt quia pariatur
-              commodi sed unde iste quasi autem mollitia atque. Rem impedit illo
-              repellendus quisquam, ex, nisi veniam, dolor id nam blanditiis
-              aliquid temporibus non! Officiis iste soluta ullam.
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur nihil fugiat ipsum. Deserunt molestias esse, dolores id
-              illo corrupti voluptatem aspernatur exercitationem!
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur nihil fugiat ipsum. Deserunt molestias esse, dolores id
-              illo corrupti voluptatem aspernatur exercitationem!
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+              nulla suscipit eius reprehenderit enim quam ad, consequuntur magni
+              alias harum. Maxime, eveniet?
             </p>
           </div>
-          <div class="aside--card border-blue">
-            <h1>Stay Up-to-Date with Our Monthly Newsletter!</h1>
-            <p>
-              Get the Latest News and Exclusive Offers Straight to Your Inbox
-            </p>
-
-            <form>
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label for="email">Email:</label>
-                <input type="email" />
-              </div>
-              <div>
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </aside>
-        <section class="post--comment">
-          <h2>Leave a comment</h2>
-          <div class="comment">
-            <form>
-              <div>
-                <label for="name">Name</label>
-                <input type="text" />
-                <label for="email">Email</label>
-                <input type="email" />
-              </div>
-              <label for="comment">Comment:</label>
-              <input type="text" name="" id="" />
-            </form>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer-content">
