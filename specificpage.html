@@ -26,7 +26,6 @@
     <!--Scripts-->
     <script defer src="./js/global.js"></script>
     <script defer src="./js/header.js"></script>
-    <script defer src="./js/displaymode.js"></script>
     <script defer src="./js/specificpost.js"></script>
   </head>
   <body>
@@ -70,32 +69,23 @@
       <section class="blog-container"></section>
       <section class="post--comment">
         <h2>Leave a comment</h2>
-        <form class="comment-container" method="post">
+        <form class="comment-container" id="comment-container">
           <div>
             <label for="name">Name</label>
-            <input class="textfield" type="text" />
+            <input class="textfield" type="text" id="comment-name" />
           </div>
           <div>
             <label for="email">Email</label>
-            <input class="textfield" type="email" />
+            <input class="textfield" type="email" id="comment-email" />
           </div>
           <div>
             <label for="comment">Comment:</label>
-            <textarea class="textfield-message" name="" id=""></textarea>
+            <textarea class="textfield-message" id="comment-message"></textarea>
           </div>
-          <button class="button-submit" type="submit">Send</button>
+          <button class="button-submit" type="submit" id="comment-submit">
+            Send
+          </button>
         </form>
-        <div class="comment-items">
-          <div class="comment-item">
-            <h3>First name</h3>
-            <p>16.05.2023</p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
-              nulla suscipit eius reprehenderit enim quam ad, consequuntur magni
-              alias harum. Maxime, eveniet?
-            </p>
-          </div>
-        </div>
       </section>
     </main>
     <footer>
