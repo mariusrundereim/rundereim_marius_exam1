@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 400px) {
   .primary-nav {
-    min-height: 20rem;
+    min-height: 100dvh;
   }
   .nav-list {
     flex-direction: column;
