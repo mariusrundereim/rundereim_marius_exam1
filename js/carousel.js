@@ -57,7 +57,7 @@ function postCarousel(data) {
     const cardInfo = document.createElement("div");
     const cardDate = document.createElement("p");
     const cardReadingTime = document.createElement("p");
-    const cardTitle = document.createElement("h2");
+    const cardTitle = document.createElement("h3");
 
     // classLists
     card.classList.add("post-card");
