@@ -61,11 +61,11 @@ function postCarousel(data) {
 
     // classLists
     card.classList.add("post-card");
-
     cardInfo.classList.add("card-info");
     cardDate.classList.add("date-prop");
     cardReadingTime.classList.add("reading-time-prop");
     cardImage.classList.add("image-prop");
+    cardTitle.classList.add("title-heading")
 
     // Content
     cardDate.textContent = post.date.slice(0, 10);

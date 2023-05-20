@@ -33,11 +33,11 @@ allBlogPosts();
 function searchByTitle(data) {
   const searchBar = document.querySelector("#search-bar");
   searchBar.addEventListener("keyup", (e) => {
-    const searchString = e.target.value.toLowerCase();
+    const searchTitle = e.target.value.toLowerCase();
     const filteredPosts = data.filter((post) => {
       return (
-        post.title.rendered.toLowerCase().includes(searchString) ||
-        post.acf.post_tags.toLowerCase().includes(searchString)
+        post.title.rendered.toLowerCase().includes(searchTitle) ||
+        post.acf.post_tags.toLowerCase().includes(searchTitle)
       );
     });
     console.log(filteredPosts);
@@ -77,7 +77,7 @@ function displayPosts(posts) {
 
   // Add load more button
   const totalPosts = posts.length;
-  const totalPage = Math.ceil(totalPosts / postsPerPage);
+  const totalPage = Math.floor((totalPosts + postsPerPage - 1) / postsPerPage);
   const loadMoreButton = document.querySelector(".btn-more");
   if (currentPage < totalPage) {
     loadMoreButton.style.display = "block";

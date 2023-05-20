@@ -197,6 +197,16 @@ p {
   height: 50dvh;
   object-fit: cover;
   border-radius: var(--radius-m);
+
+  transition: var(--trans-1);
+}
+
+.title-heading{
+  transition: var(--trans-2);
+}
+
+.title-heading:hover {
+  color: var(--clr-red);
 }
 
 .latest-posts {
@@ -224,7 +234,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 16rem;
+  min-height: 20rem;
 }
 
 .hero-title {
