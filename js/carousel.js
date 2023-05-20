@@ -72,6 +72,7 @@ function postCarousel(data) {
     cardReadingTime.textContent = `${post.acf.reading_time} min read`;
     card.href = `specificpage.html?id=${post.id}`;
     cardImage.src = post.acf.src;
+    cardImage.alt = post.acf.alt_text;
     cardTitle.textContent = post.title.rendered;
 
     // Append

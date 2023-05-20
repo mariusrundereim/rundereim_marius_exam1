@@ -44,7 +44,7 @@ function popUp(data) {
     modalPop.innerHTML = `
     <div class="modal--container">
       <div class="modal--img-container">
-        <img class="modal--image" src="${data.acf.src}" alt="">
+        <img class="modal--image" src="${data.acf.src}" alt="${data.acf.alt_text}">
       </div>
     </div>`;
   });
