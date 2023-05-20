@@ -17,7 +17,7 @@ function saveDisplayTheme() {
 
 window.onbeforeunload = saveDisplayTheme;
 
-if (displayTheme == "enabled") {
+if (displayTheme === "enabled") {
   enableLightMode();
 } else {
   disableLightMode();
