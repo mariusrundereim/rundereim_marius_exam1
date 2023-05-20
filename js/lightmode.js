@@ -15,7 +15,7 @@ function saveDisplayTheme() {
   localStorage.setItem("displayTheme", displayTheme);
 }
 
-window.onbeforeunload = saveDisplayTheme;
+window.addEventListener("beforeunload", saveDisplayTheme);
 
 if (displayTheme === "enabled") {
   enableLightMode();
