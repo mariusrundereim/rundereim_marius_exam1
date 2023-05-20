@@ -30,7 +30,18 @@
   display: grid;
   align-self: center;
   background: var(--clr-blue);
-  min-height: 4rem;
+  animation: nav-fade-in 1s forwards;
+}
+
+@keyframes nav-fade-in {
+  0% {
+    opacity: 0;
+    min-height: 0dvh;
+  }
+  100% {
+    min-height: 50dvh;
+    opacity: 1;
+  }
 }
 
 .nav-list {
@@ -39,6 +50,17 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.nav-link {
+  transition: var(--trans-1);
+  font-size: var(--font-m);
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--clr-light);
 }
 
 @media screen and (max-width: 400px) {
@@ -50,11 +72,7 @@
   }
 }
 
-.nav-link {
-  font-size: var(--font-m);
-  color: var(--clr-light);
-  text-decoration: none;
-}
+
 
 .header-options {
   min-width: 80px;
