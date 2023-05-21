@@ -254,6 +254,13 @@ p {
   gap: var(--space-m);
 }
 
+.article-inside{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
 @media screen and (max-width: 800px) {
   .article-col{
     grid-template-columns: 1fr;

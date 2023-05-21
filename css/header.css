@@ -82,6 +82,23 @@
   z-index: 10;
 }
 
+.menu-toggle{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-toggle::after{
+  position: absolute;
+  display: block;
+  transform: translateY(3.5rem);
+  content: 'Menu';
+  font-size: var(--font-m);
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  color: var(--clr-blue);
+}
+
 .lightdark-icon,
 .menu--icon {
   color: var(--clr-light);
