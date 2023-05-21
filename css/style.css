@@ -135,6 +135,13 @@ p {
 .title-font {
   font-size: var(--font-l);
   color: var(--clr-red);
+  margin-bottom: 1.5rem;
+}
+
+.subtitle-font {
+  font-size: var(--font-m);
+  color: var(--clr-blue);
+  margin-bottom: 1.5rem;
 }
 
 .card-title {
@@ -263,6 +270,20 @@ p {
   height: 40dvh;
   object-fit: cover;
   border-radius: var(--radius-m);
+}
+
+.setup-guide {
+  list-style-position: inside;
+  gap: 1rem;
+
+}
+
+.setup-item {
+  font-size: 1.1rem;
+  border: 1px solid var(--clr-dark-3);
+  padding: 0.5rem;
+  border-radius: var(--radius-m);
+  width: min(100%, 40rem);
 }
 
 /****** LIST OF POSTS ******/
