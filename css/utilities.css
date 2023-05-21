@@ -41,6 +41,7 @@
 /* Show & Hide */
 
 .show-more {
+  margin-top: var(--space-l);
   display: grid;
   place-content: center;
   min-height: 5rem;

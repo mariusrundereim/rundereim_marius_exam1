@@ -72,21 +72,25 @@
     </header>
     <main class="main-wrapper">
       <section>
-        <article>
-          <h1 class="title-font">Why use CSS?</h1>
-          <p>
-            CSS stands for Cascading Style Sheets, and it is a fundamental
-            technology for creating visually appealing web pages. It allows you
-            to separate the presentation of a website from its structure and
-            content, making it easier to maintain and modify. With CSS, you can
-            control the layout, colors, fonts, and other visual aspects of your
-            web pages.
-          </p>
+        <h1 class="title-font">Why use CSS?</h1>
+        <article class="article-col">
+          <div>
+            <h2>
+              CSS stands for Cascading Style Sheets, and it is a fundamental
+              technology for creating visually appealing web pages. It allows you
+              to separate the presentation of a website from its structure and
+              content, making it easier to maintain and modify. 
+            </h2>
+          </div>
+          <img class="about-image" src="./images/css3-logo.jpg" alt="CSS3 Logo icon">
         </article>
+      </section>
+      <!-- Article 2-->
+      <section class="article-col">
+        <h2>
+          Some of the main features of using CSS in a website project include:
+        </h2>
         <article>
-          <h2>
-            Some of the main features of using CSS in a website project include:
-          </h2>
           <ul>
             <li>Separation of presentation from content</li>
             <li>
@@ -99,8 +103,11 @@
             <li>Reduced file size of pages</li>
           </ul>
         </article>
+      </section>
+      <!-- Article 3 -->
+      <section>
+        <h2>To set up CSS in your HTML document, follow these steps:</h2>
         <article>
-          <h2>To set up CSS in your HTML document, follow these steps:</h2>
           <ol>
             <li>
               Create a new file and save it as style.css in the same directory
@@ -120,35 +127,33 @@
             </li>
         </article>
       </section>
+        
+        
+      
     </main>
     <footer>
       <div class="footer-content">
-        <img
-          class="page-logo-image"
-          src="./images/svg/sv_logo_white.svg"
-          alt="Logo - Stylevault"
-        />
         <nav class="footer-nav">
-          <ul class="nav-list">
+          <ul class="footer-nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="footer-nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="listofposts.html">List of posts</a>
+              <a class="footer-nav-link" href="listofposts.html">List of posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="footer-nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="footer-nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
         </nav>
+        <div class="footer-bottom">
+          <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
+        </div>
       </div>
-
-      <div class="footer-bottom">
-        <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
-      </div>
+      
     </footer>
   </body>
 </html>

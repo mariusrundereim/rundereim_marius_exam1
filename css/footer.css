@@ -3,21 +3,16 @@
 footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: var(--space-m);
-  justify-content: space-between;
   min-height: 10rem;
   margin-top: auto;
-
-  padding-bottom: 2rem;
 }
 
 .footer-content {
-
   display: flex;
-  align-items: center;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   gap: var(--space-m);
 }
 
@@ -30,21 +25,23 @@ footer {
   gap: 1rem;
 }
 
+.footer-nav-link {
+  transition: var(--trans-1);
+  font-size: var(--font-m);
+  color: var(--clr-white);
+  text-decoration: none;
+}
 
+.footer-nav-link:hover {
+  color: var(--clr-red);
+}
 
 .footer-bottom{
   text-align: center;
 }
 
 @media (min-width: 600px) {
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-  }
-
   .footer-nav-list{
     flex-direction: row;
   }
-  
 }

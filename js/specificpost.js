@@ -24,9 +24,13 @@ displayPost();
 
 function showContent(data) {
   const date = data.date.slice(0, 10);
+  const blogContainer = document.querySelector(".blog-container")
+
+  blogContainer.innerHTML = "";
+  
   return (document.querySelector(".blog-container").innerHTML += `
   <div class="modal"></div>
-  <img class="image-prop post-image-click" src="${data.acf.src}" alt="data.acf.alt_text">
+  <img class="image-prop post-image-click" src="${data.acf.src}" alt="${data.acf.alt_text}">
   <div class="post-info">
     <p>${date}</p>
     <p><span>${data.acf.reading_time}</span> min read</p>

@@ -20,7 +20,7 @@ getPosts();
 const latestPosts = document.querySelector(".carousel-content");
 let index = 0;
 
-// Function for carousel navigation
+// Navigation
 
 function carouselNavigation(data) {
   const prevBtn = document.querySelector(".arrow-prev");
@@ -43,7 +43,7 @@ function carouselNavigation(data) {
   });
 }
 
-// Function for carousel content
+// Carousel Cards
 
 function postCarousel(data) {
   latestPosts.innerHTML = "";
