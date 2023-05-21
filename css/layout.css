@@ -11,6 +11,17 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+.spacer-m{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.spacer-xl{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
 
 
 .col--1 {
