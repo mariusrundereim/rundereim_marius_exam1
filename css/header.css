@@ -97,6 +97,18 @@
   text-transform: uppercase;
   writing-mode: vertical-lr;
   color: var(--clr-blue);
+  animation: menu-bump 8s infinite ease;
+}
+
+@keyframes menu-bump {
+  0%{
+    transform: translateY(3.5rem);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(3.5rem);
+    opacity: 1;
+  }
 }
 
 .lightdark-icon,
