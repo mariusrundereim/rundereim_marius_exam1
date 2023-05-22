@@ -279,10 +279,26 @@ p {
   border-radius: var(--radius-m);
 }
 
+/* Featured CSS */
+
+.featured-item h3 {
+  color: var(--clr-red);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.featured-item{
+
+  padding-inline: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Setup */
+
 .setup-guide {
   list-style-position: inside;
   gap: 1rem;
-
 }
 
 .setup-item {

@@ -6,10 +6,25 @@
   flex-grow: 1;
 }
 
+.main-wrapper-blog {
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .grid-autofit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
+
+.grid-two-col{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1rem;
+}
+
+
 
 .spacer-m{
   display: flex;
