@@ -45,8 +45,13 @@ function searchByTitle(data) {
 }
 
 function displayNoPosts(){
-  const html = `<p>Could not find what you are looking for.<p>`
-  document.querySelector(".all-posts").innerHTML = html;
+  const html = `
+  <div>
+  <h3>No found</h3>
+  <p>Send in a request for a blog post on the Contact page <a href="./contact.html">here</a> </p>
+  </div>
+  `
+  content.innerHTML = html;
 }
 
 function displayPosts(posts) {
