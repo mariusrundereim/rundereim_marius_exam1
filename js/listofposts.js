@@ -28,14 +28,25 @@ function searchByTitle(data) {
   const searchBar = document.querySelector("#search-bar");
   searchBar.addEventListener("keyup", (e) => {
     const searchTitle = e.target.value.toLowerCase();
-    const filteredPosts = data.filter((post) => {
+    const filterPosts = data.filter((post) => {
       return (
         post.title.rendered.toLowerCase().includes(searchTitle) ||
         post.acf.post_tags.toLowerCase().includes(searchTitle)
       );
     });
-    displayPosts(filteredPosts);
+
+    // If no post found
+    if(filterPosts.length === 0){
+      displayNoPosts()
+    } else {
+      displayPosts(filterPosts);
+    }
   });
+}
+
+function displayNoPosts(){
+  const html = `<p>Could not find what you are looking for.<p>`
+  document.querySelector(".all-posts").innerHTML = html;
 }
 
 function displayPosts(posts) {
