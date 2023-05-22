@@ -12,20 +12,14 @@ async function allBlogPosts() {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-
     allPosts = data;
-    console.log(allPosts.length + " " + "results of posts");
-
     document.title = "Stylevault" + " - " + "All Posts";
-
     searchByTitle(allPosts);
     displayPosts(allPosts);
   } catch (error) {
     console.log("This is:", error);
     document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
-  } finally {
-    console.log("Code that will run no matter what");
-  }
+  } 
 }
 allBlogPosts();
 
@@ -40,7 +34,6 @@ function searchByTitle(data) {
         post.acf.post_tags.toLowerCase().includes(searchTitle)
       );
     });
-    console.log(filteredPosts);
     displayPosts(filteredPosts);
   });
 }
@@ -51,7 +44,7 @@ function displayPosts(posts) {
   for (let i = 0; i < currentPage * postsPerPage; i++) {
     if (i >= posts.length) {
       break;
-    }
+    } 
     currentPosts.push(posts[i]);
   }
 
