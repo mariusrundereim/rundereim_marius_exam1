@@ -19,7 +19,7 @@ async function allBlogPosts() {
   } catch (error) {
     console.log("This is:", error);
     document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
-  } 
+  }
 }
 allBlogPosts();
 
@@ -36,21 +36,21 @@ function searchByTitle(data) {
     });
 
     // If no post found
-    if(filterPosts.length === 0){
-      displayNoPosts()
+    if (filterPosts.length === 0) {
+      displayNoPosts();
     } else {
       displayPosts(filterPosts);
     }
   });
 }
 
-function displayNoPosts(){
+function displayNoPosts() {
   const html = `
   <div>
   <h3>No found</h3>
   <p>Send in a request for a blog post on the Contact page <a href="./contact.html">here</a> </p>
   </div>
-  `
+  `;
   content.innerHTML = html;
 }
 
@@ -60,7 +60,7 @@ function displayPosts(posts) {
   for (let i = 0; i < currentPage * postsPerPage; i++) {
     if (i >= posts.length) {
       break;
-    } 
+    }
     currentPosts.push(posts[i]);
   }
 
@@ -83,6 +83,12 @@ function displayPosts(posts) {
     .join("");
 
   document.querySelector(".all-posts").innerHTML = html;
+
+  // Popular tags
+
+  const tagTitle = sessionStorage.getItem("tagTitle");
+  document.getElementById("search-bar").value = tagTitle;
+  sessionStorage.removeItem("tagTitle");
 
   // Add load more button
   const totalPosts = posts.length;

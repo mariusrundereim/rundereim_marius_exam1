@@ -25,27 +25,38 @@
     ></script>
 
     <!-- Hotjar Tracking Code for Stylecault - CSS Tips & Tricks -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3500298,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3500298, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
     <!--Scripts-->
     <script defer src="./js/global.js"></script>
     <script defer src="./js/carousel.js"></script>
     <script defer src="./js/header.js"></script>
     <script defer src="./js/lightmode.js"></script>
+    <script defer src="./js/populartags.js"></script>
   </head>
   <body>
     <header class="top-header">
       <div class="header-wrap">
         <div class="top-level">
-          <a class="pagelogo" id="page-logo" href="index.html" alt="Page logo"></a>
+          <a
+            class="pagelogo"
+            id="page-logo"
+            href="index.html"
+            alt="Page logo"
+          ></a>
           <div class="header-options">
             <div class="lightdark-toggle">
               <i class="fas fa-sun toggle-lightdark lightdark-icon"></i>
@@ -108,15 +119,13 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
         <article>
-          <a class="btn-tags btn-prop" href="listofposts.html">display: flex</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">object-fit</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">::before</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">flex-basis</a>
-          <a class="btn-tags btn-prop" href="listofposts.html">flex-grow</a>
-          <a class="btn-tags btn-prop" href="listofposts.html"
-            >grid-template-columns</a
-          >
-          <a class="btn-tags btn-prop" href="listofposts.html">grid-area</a>
+          <a class="btn-tags btn-prop popular-tags">display: flex</a>
+          <a class="btn-tags btn-prop popular-tags">object-fit</a>
+          <a class="btn-tags btn-prop popular-tags">::before</a>
+          <a class="btn-tags btn-prop popular-tags">flex-basis</a>
+          <a class="btn-tags btn-prop popular-tags">flex-grow</a>
+          <a class="btn-tags btn-prop popular-tags">grid-template-columns</a>
+          <a class="btn-tags btn-prop popular-tags">grid-area</a>
         </article>
       </section>
     </main>
@@ -128,7 +137,9 @@
               <a class="footer-nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="footer-nav-link" href="listofposts.html">List of posts</a>
+              <a class="footer-nav-link" href="listofposts.html"
+                >List of posts</a
+              >
             </li>
             <li class="nav-item">
               <a class="footer-nav-link" href="about.html">About</a>
@@ -142,7 +153,6 @@
           <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
         </div>
       </div>
-      
     </footer>
   </body>
 </html>
