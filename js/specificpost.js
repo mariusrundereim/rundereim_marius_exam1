@@ -3,7 +3,7 @@ const params = new URLSearchParams(queryString);
 const postId = params.get("id");
 
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/${postId}`;
-
+console.log(url);
 // Async
 
 async function displayPost() {
@@ -24,10 +24,10 @@ displayPost();
 
 function showContent(data) {
   const date = data.date.slice(0, 10);
-  const blogContainer = document.querySelector(".blog-container")
+  const blogContainer = document.querySelector(".blog-container");
 
   blogContainer.innerHTML = "";
-  
+
   return (document.querySelector(".blog-container").innerHTML += `
   <div class="modal"></div>
   <img class="image-prop post-image-click" src="${data.acf.src}" alt="${data.acf.alt_text}">
@@ -61,21 +61,26 @@ function popUp(data) {
 }
 
 const commentForm = document.querySelector("#comment-container");
-const commentName = document.querySelector("#comment-name");
-const commentEmail = document.querySelector("#comment-email");
-const commentMessage = document.querySelector("#comment-message");
+const commentName = document.querySelector("#comment-name").value;
+const commentEmail = document.querySelector("#comment-email").value;
+const commentMessage = document.querySelector("#comment-message").value;
 const commentSubmit = document.querySelector("#comment-submit");
+
+commentSubmit.addEventListener("click", () => postComment());
 
 function createComment() {
   const comment = JSON.stringify({
-    //
+    author_name: commentName,
+    author_email: commentEmail,
+    content: commentMessage,
+    post: postId,
   });
   postComment(comment);
 }
 
 async function postComment(comment) {
   console.log("Check");
-  let postId = 90;
+
   const res = await fetch(`https://runder.no/exam1/wp-json/wp/v2/comments`, {
     method: "POST",
     headers: {
