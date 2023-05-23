@@ -51,12 +51,13 @@ function searchForPosts(data) {
       displayPosts(filterPosts);
     }
   };
+
   const tagTitle = urlParams.get("filter");
-  console.log(tagTitle);
+
   if (tagTitle) {
     setTimeout(() => {
       applyFilters(tagTitle);
-    }, "10");
+    }, 10);
   }
 }
 
