@@ -1,8 +1,12 @@
+//
+//
 let currentPage = 1;
 const postsPerPage = 10;
 let allPosts = [];
 
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
+
+const urlParams = new URLSearchParams(window.location.search);
 
 const searchBar = document.querySelector("#search-bar");
 const content = document.querySelector(".all-posts");
@@ -24,16 +28,22 @@ async function allBlogPosts() {
 allBlogPosts();
 
 // Search-field
-
 // Search by title
 function searchByTitle(data) {
   const searchBar = document.querySelector("#search-bar");
+
   searchBar.addEventListener("keyup", (e) => {
-    const searchTitle = e.target.value.toLowerCase();
+    applyFilters(e.target.value);
+  });
+
+  const applyFilters = (searchTitle) => {
+    searchBar.value = searchTitle;
+    console.log(searchBar.value);
+    console.log(data);
     const filterPosts = data.filter((post) => {
       return (
-        post.title.rendered.toLowerCase().includes(searchTitle) ||
-        post.acf.post_tags.toLowerCase().includes(searchTitle)
+        post.title.rendered.toLowerCase().includes(searchBar.value) ||
+        post.acf.post_tags.toLowerCase().includes(searchBar.value)
       );
     });
 
@@ -43,13 +53,21 @@ function searchByTitle(data) {
     } else {
       displayPosts(filterPosts);
     }
-  });
+  };
+  const tagTitle = urlParams.get("filter");
+  console.log(tagTitle);
+  if (tagTitle) {
+    setTimeout(() => {
+      console.log("INNE");
+      applyFilters(tagTitle);
+    }, "10");
+  }
 }
 
 function displayNoPosts() {
   const html = `
   <div>
-  <h3>No found</h3>
+  <h3>No post found</h3>
   <p>Send in a request for a blog post on the Contact page <a href="./contact.html">here</a> </p>
   </div>
   `;
@@ -87,9 +105,9 @@ function displayPosts(posts) {
   document.querySelector(".all-posts").innerHTML = html;
 
   // Popular tags
-  const tagTitle = sessionStorage.getItem("tagTitle");
-  document.getElementById("search-bar").value = tagTitle;
-  sessionStorage.removeItem("tagTitle");
+  //const tagTitle = sessionStorage.getItem("tagTitle");
+  //document.getElementById("search-bar").value = tagTitle;
+  //sessionStorage.removeItem("tagTitle");
 
   // Add load more button
   const totalPosts = posts.length;
