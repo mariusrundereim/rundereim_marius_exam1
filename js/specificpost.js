@@ -65,8 +65,7 @@ const commentName = document.querySelector("#comment-name").value;
 const commentEmail = document.querySelector("#comment-email").value;
 const commentMessage = document.querySelector("#comment-message").value;
 const commentSubmit = document.querySelector("#comment-submit");
-
-commentSubmit.addEventListener("click", () => postComment());
+console.log(postId);
 
 function createComment() {
   const comment = JSON.stringify({
@@ -75,18 +74,19 @@ function createComment() {
     content: commentMessage,
     post: postId,
   });
+  commentSubmit.addEventListener("submit", () => createComment());
   postComment(comment);
 }
 
 async function postComment(comment) {
   console.log("Check");
 
-  const res = await fetch(`https://runder.no/exam1/wp-json/wp/v2/comments`, {
+  const res = await fetch("https://runder.no/exam1/wp-json/wp/v2/comments", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      body: comment,
     },
+    body: comment,
   });
   const data = await res.json();
   console.log(data);
