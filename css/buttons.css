@@ -41,7 +41,7 @@
   transition: var(--trans-1);
 }
 
-.btn-more:hover{
+.btn-more:hover {
   color: var(--clr-blue);
   transform: translateY(10px);
 }
@@ -71,6 +71,7 @@
 }
 
 .btn-tags {
+  cursor: pointer;
   font-size: var(--font-m);
   color: var(--clr-light);
   padding: 5px 8px;

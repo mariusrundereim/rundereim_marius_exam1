@@ -23,6 +23,8 @@ async function allBlogPosts() {
 }
 allBlogPosts();
 
+// Search-field
+
 // Search by title
 function searchByTitle(data) {
   const searchBar = document.querySelector("#search-bar");
