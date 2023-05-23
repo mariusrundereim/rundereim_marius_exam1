@@ -18,7 +18,7 @@ async function allBlogPosts() {
     console.log(data);
     allPosts = data;
     document.title = "Stylevault" + " - " + "All Posts";
-    searchByTitle(allPosts);
+    searchForPosts(allPosts);
     displayPosts(allPosts);
   } catch (error) {
     console.log("This is:", error);
@@ -27,9 +27,8 @@ async function allBlogPosts() {
 }
 allBlogPosts();
 
-// Search-field
-// Search by title
-function searchByTitle(data) {
+// Search for Posts
+function searchForPosts(data) {
   const searchBar = document.querySelector("#search-bar");
 
   searchBar.addEventListener("keyup", (e) => {
@@ -38,8 +37,6 @@ function searchByTitle(data) {
 
   const applyFilters = (searchTitle) => {
     searchBar.value = searchTitle;
-    console.log(searchBar.value);
-    console.log(data);
     const filterPosts = data.filter((post) => {
       return (
         post.title.rendered.toLowerCase().includes(searchBar.value) ||
@@ -58,7 +55,6 @@ function searchByTitle(data) {
   console.log(tagTitle);
   if (tagTitle) {
     setTimeout(() => {
-      console.log("INNE");
       applyFilters(tagTitle);
     }, "10");
   }
