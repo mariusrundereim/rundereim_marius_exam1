@@ -24,16 +24,21 @@
       crossorigin="anonymous"
     ></script>
     <!-- Hotjar Tracking Code for Stylecault - CSS Tips & Tricks -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3500298,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3500298, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
     <!--Scripts-->
     <script defer src="./js/global.js"></script>
     <script defer src="./js/header.js"></script>
@@ -44,7 +49,12 @@
     <header class="top-header">
       <div class="header-wrap">
         <div class="top-level">
-          <a class="pagelogo" id="page-logo" href="index.html" alt="Page logo"></a>
+          <a
+            class="pagelogo"
+            id="page-logo"
+            href="index.html"
+            alt="Page logo"
+          ></a>
           <div class="header-options">
             <div class="lightdark-toggle">
               <i class="fas fa-sun toggle-lightdark lightdark-icon"></i>
@@ -58,10 +68,13 @@
         <nav class="primary-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="listofposts.html">List of posts</a>
+              <a class="nav-link" href="listofposts.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -77,71 +90,134 @@
           <div class="article-inside">
             <h2>
               CSS stands for Cascading Style Sheets, and it is a fundamental
-              technology for creating visually appealing web pages. It allows you
-              to separate the presentation of a website from its structure and
-              content, making it easier to maintain and modify. 
+              technology for creating visually appealing web pages. It allows
+              you to separate the presentation of a website from its structure
+              and content, making it easier to maintain and modify.
             </h2>
-            <a href="listofposts.html" class="btn-3 btn-prop">Read posts about CSS</a>
-            
+            <a href="listofposts.html" class="btn-3 btn-prop"
+              >Read posts about CSS</a
+            >
           </div>
-          <img class="about-image" src="./images/css3-logo.jpg" alt="CSS3 Logo icon">
+          <img
+            class="about-image"
+            src="./images/css3-logo.jpg"
+            alt="CSS3 Logo icon"
+          />
         </article>
       </section>
       <!-- Article 2-->
       <section>
-        <h2 class="subtitle-font">
-          Features that can be achieved using CSS:
-        </h2>
+        <h2 class="subtitle-font">Features that can be achieved using CSS:</h2>
         <article class="grid-two-col">
-          
           <div class="featured-item box-style">
             <h3>Selectors:</h3>
-            <p>CSS provides a wide range of selectors to target specific elements in an HTML document. </p>
-            <p>Selectors allow you to apply styles to specific elements based on their tag names, class names, IDs, attributes, or even their position in the document structure.</p>
+            <p>
+              CSS provides a wide range of selectors to target specific elements
+              in an HTML document.
+            </p>
+            <p>
+              Selectors allow you to apply styles to specific elements based on
+              their tag names, class names, IDs, attributes, or even their
+              position in the document structure.
+            </p>
           </div>
           <div class="featured-item box-style">
             <h3>Box Model:</h3>
-            <p>CSS allows you to control the sizing, spacing, and positioning of elements using the box model.</p>
-            <p>The box model consists of the content area, padding, border, and margin. You can set the width, height, padding, border thickness, and margin of elements to achieve the desired layout.</p>
+            <p>
+              CSS allows you to control the sizing, spacing, and positioning of
+              elements using the box model.
+            </p>
+            <p>
+              The box model consists of the content area, padding, border, and
+              margin. You can set the width, height, padding, border thickness,
+              and margin of elements to achieve the desired layout.
+            </p>
           </div>
           <div class="featured-item box-style">
             <h3>Typography:</h3>
-            <p>CSS enables you to control the typography and text formatting of HTML elements. </p>
-            <p>You can specify font families, sizes, weights, styles (italic, bold), text alignment, line height, letter spacing, and text decoration (underline, strike-through).</p>
+            <p>
+              CSS enables you to control the typography and text formatting of
+              HTML elements.
+            </p>
+            <p>
+              You can specify font families, sizes, weights, styles (italic,
+              bold), text alignment, line height, letter spacing, and text
+              decoration (underline, strike-through).
+            </p>
           </div>
           <div class="featured-item box-style">
             <h3>Colors and Backgrounds:</h3>
-            <p>CSS provides a variety of options to set colors and backgrounds for elements.</p>
-            <p>You can specify foreground and background colors using named colors, hexadecimal codes, RGB values, or HSL values.</p>
-            <p>Additionally, you can set background images, control their positioning, repeat behavior, and transparency.</p>
+            <p>
+              CSS provides a variety of options to set colors and backgrounds
+              for elements.
+            </p>
+            <p>
+              You can specify foreground and background colors using named
+              colors, hexadecimal codes, RGB values, or HSL values.
+            </p>
+            <p>
+              Additionally, you can set background images, control their
+              positioning, repeat behavior, and transparency.
+            </p>
           </div>
           <div class="featured-item box-style">
             <h3>Layout and Positioning:</h3>
-            <p>CSS offers different layout and positioning techniques to arrange elements on a webpage.</p>
-            <p>You can use properties like 'display', 'float', 'position', and 'flexbox' or 'grid' layouts to control the positioning, order, and flow of elements.</p>
+            <p>
+              CSS offers different layout and positioning techniques to arrange
+              elements on a webpage.
+            </p>
+            <p>
+              You can use properties like 'display', 'float', 'position', and
+              'flexbox' or 'grid' layouts to control the positioning, order, and
+              flow of elements.
+            </p>
           </div>
           <div class="featured-item box-style">
             <h3>Borders and Shadows:</h3>
             <p>CSS allows you to apply borders and box shadows to elements.</p>
-            <p>You can specify border styles, colors, and thicknesses for all sides or individual sides of an element.</p>
-            <p>Additionally, you can create shadows using properties like box-shadow to add depth and visual effects.</p>
+            <p>
+              You can specify border styles, colors, and thicknesses for all
+              sides or individual sides of an element.
+            </p>
+            <p>
+              Additionally, you can create shadows using properties like
+              box-shadow to add depth and visual effects.
+            </p>
           </div>
           <div class="featured-item box-style">
             <h3>Transitions and Animations:</h3>
-            <p>CSS enables the creation of smooth transitions and animations on elements.</p>
-            <p>You can specify transition effects for properties such as color, size, opacity, and position.</p>
-            <p>With keyframe animations, you can define complex animations with different stages and timings.</p>
+            <p>
+              CSS enables the creation of smooth transitions and animations on
+              elements.
+            </p>
+            <p>
+              You can specify transition effects for properties such as color,
+              size, opacity, and position.
+            </p>
+            <p>
+              With keyframe animations, you can define complex animations with
+              different stages and timings.
+            </p>
           </div>
           <div class="featured-item box-style">
             <h3>Responsive Design:</h3>
-            <p>CSS supports responsive design by allowing you to define different styles based on the screen size or device.</p>
-            <p>Media queries in CSS let you specify styles for specific screen widths, enabling your web page to adapt and provide an optimal user experience on various devices.</p>
+            <p>
+              CSS supports responsive design by allowing you to define different
+              styles based on the screen size or device.
+            </p>
+            <p>
+              Media queries in CSS let you specify styles for specific screen
+              widths, enabling your web page to adapt and provide an optimal
+              user experience on various devices.
+            </p>
           </div>
         </article>
       </section>
       <!-- Article 3 -->
       <section>
-        <h2 class="subtitle-font">To set up CSS in your HTML document, follow these steps:</h2>
+        <h2 class="subtitle-font">
+          To set up CSS in your HTML document, follow these steps:
+        </h2>
         <article>
           <ol class="setup-guide grid-two-col">
             <li class="setup-item">
@@ -149,23 +225,24 @@
               as your HTML file.
             </li>
             <li class="setup-item">
-              Open your HTML file and add a "link" element in the "head" section to reference the CSS file.
+              Open your HTML file and add a "link" element in the "head" section
+              to reference the CSS file.
             </li>
             <li class="setup-item">
-              In the "link" element, specify the location of the CSS file using the "href" attribute.
+              In the "link" element, specify the location of the CSS file using
+              the "href" attribute.
             </li>
             <li class="setup-item">
-              Optionally, add a "type" attribute with the value "text/css" to specify the MIME type of the file.
+              Optionally, add a "type" attribute with the value "text/css" to
+              specify the MIME type of the file.
             </li>
             <li class="setup-item">
-              Save your HTML file and open it in a web browser to see the applied styles.
+              Save your HTML file and open it in a web browser to see the
+              applied styles.
             </li>
           </ol>
         </article>
       </section>
-        
-        
-      
     </main>
     <footer>
       <div class="footer-content">
@@ -175,7 +252,7 @@
               <a class="footer-nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="footer-nav-link" href="listofposts.html">List of posts</a>
+              <a class="footer-nav-link" href="listofposts.html">Blog</a>
             </li>
             <li class="nav-item">
               <a class="footer-nav-link" href="about.html">About</a>
@@ -189,7 +266,6 @@
           <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
         </div>
       </div>
-      
     </footer>
   </body>
 </html>

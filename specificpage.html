@@ -24,28 +24,37 @@
       crossorigin="anonymous"
     ></script>
     <!-- Hotjar Tracking Code for Stylecault - CSS Tips & Tricks -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3500298,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3500298, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
     <!--Scripts-->
     <script defer src="./js/global.js"></script>
     <script defer src="./js/lightmode.js"></script>
     <script defer src="./js/header.js"></script>
     <script defer src="./js/specificpost.js"></script>
-        
   </head>
   <body>
     <header class="top-header">
       <div class="header-wrap">
         <div class="top-level">
-          <a class="pagelogo" id="page-logo" href="index.html" alt="Page logo"></a>
+          <a
+            class="pagelogo"
+            id="page-logo"
+            href="index.html"
+            alt="Page logo"
+          ></a>
           <div class="header-options">
             <div class="lightdark-toggle">
               <i class="fas fa-sun toggle-lightdark lightdark-icon"></i>
@@ -59,10 +68,13 @@
         <nav class="primary-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="listofposts.html">List of posts</a>
+              <a class="nav-link" href="listofposts.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -71,7 +83,6 @@
         </nav>
       </div>
     </header>
-
     <main class="main-wrapper-blog">
       <section class="blog-container">
         <!--Loader-->
@@ -111,7 +122,7 @@
               <a class="footer-nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="footer-nav-link" href="listofposts.html">List of posts</a>
+              <a class="footer-nav-link" href="listofposts.html">Blog</a>
             </li>
             <li class="nav-item">
               <a class="footer-nav-link" href="about.html">About</a>
@@ -125,7 +136,6 @@
           <p>© 2019-2023 Stylevault - Site is created in Visual Studio Code</p>
         </div>
       </div>
-      
     </footer>
   </body>
 </html>
