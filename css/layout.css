@@ -54,10 +54,10 @@
   gap: var(--space-m);
 }
 
-.post--comment {
+/* .post--comment {
   width: min(100% - 1rem, 44rem);
   margin-inline: auto;
-}
+} */
 
 .section-title {
   margin-bottom: 2rem;

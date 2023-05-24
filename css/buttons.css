@@ -21,11 +21,17 @@
 /* Submit */
 
 .button-submit {
+  cursor: pointer;
   padding: var(--space-sm);
-  color: white;
+  color: var(--clr-light);
   background: var(--clr-blue);
   border-radius: var(--radius-s);
   border: none;
+  transition: var(--trans-1);
+}
+
+.button-submit:hover {
+  background: var(--clr-red);
 }
 
 /* Show more */
