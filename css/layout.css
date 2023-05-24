@@ -59,6 +59,17 @@
   margin-inline: auto;
 } */
 
+.create--comment {
+  background: var(--clr-dark-3);
+  border-radius: var(--radius-m);
+  min-height: 20rem;
+  padding: 2rem;
+}
+
+.post--comment {
+  border: 4px dotted darkviolet;
+}
+
 .section-title {
   margin-bottom: 2rem;
 }

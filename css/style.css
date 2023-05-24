@@ -387,16 +387,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.comment-container {
-  background: var(--clr-dark-3);
-  border-radius: var(--radius-m);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  min-height: 30rem;
-  padding: 2rem;
-}
-
 .comment-item {
   border: 1px solid var(--clr-dark-2);
   border-radius: var(--radius-m);

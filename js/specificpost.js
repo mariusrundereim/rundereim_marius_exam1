@@ -2,16 +2,42 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const postId = params.get("id");
 
+/*
+https://runder.no/exam1/wp-json/wp/v2/comments
+*/
+
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/${postId}`;
-console.log(url);
-// Async
+
+const commentUrl = `https://runder.no/exam1/wp-json/wp/v2/comments?post=${postId}`;
+async function showPost() {
+  const response = await fetch(commentUrl);
+  const data = await response.json();
+  console.log(data);
+  console.log(data[0].author_name);
+  console.log(data[0].content.rendered);
+  displayComments(data);
+}
+showPost();
+
+function displayComments(data) {
+  const comments = document.querySelector(".comment-item");
+  data.forEach((comment) => {
+    console.log(comment.content.rendered);
+    console.log(data[0]);
+  });
+
+  comments.innerHTML += `
+  <h3>${data[0].author_name}</h3>
+  <div>${data[0].content.rendered}</div>
+  `;
+}
 
 async function displayPost() {
   try {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
+    //console.log(data);
     document.title = "Stylevault" + " - " + data.title.rendered;
     showContent(data);
     popUp(data);
@@ -62,14 +88,11 @@ function popUp(data) {
 
 console.log(postId);
 
-async function postComment() {
-  console.log("Check");
-
+async function sendComment() {
   const commentContainer = document.querySelector("#comment-container");
-
   commentContainer.addEventListener("submit", (event) => {
     event.preventDefault();
-    postComment();
+    sendComment();
   });
 
   const commentName = document.querySelector("#comment-name").value;
@@ -82,7 +105,7 @@ async function postComment() {
     content: commentMessage,
     post: postId,
   };
-  console.log(comment);
+  //console.log(comment);
 
   try {
     const res = await fetch("https://runder.no/exam1/wp-json/wp/v2/comments", {
@@ -93,10 +116,26 @@ async function postComment() {
       body: JSON.stringify(comment),
     });
     const data = await res.json();
-    console.log(data);
+    //console.log(data);
   } catch (error) {
     console.log("This is:", error);
     document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
   }
 }
-postComment();
+sendComment();
+
+function postComment() {
+  const postItem = document.querySelector(".comment-item");
+  const postName = document.querySelector("#post-name").value;
+  const postMessage = document.querySelector("#post-message").value;
+
+  postItem.innerHTML = `
+<div class="post-name">
+  <h3>${postName}</h3>
+</div>
+
+<div class="post-message">
+  <p>${postMessage}</p>
+</div>
+`;
+}
