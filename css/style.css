@@ -378,11 +378,11 @@ p {
   margin-bottom: 1rem;
 }
 
-.post--comment {
+.create--comment {
   margin-top: var(--space-xl);
 }
 
-.post--comment h2 {
+.create--comment h2 {
   color: var(--clr-red);
   margin-bottom: 1rem;
 }
