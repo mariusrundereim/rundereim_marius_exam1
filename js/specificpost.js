@@ -20,13 +20,22 @@ async function showPost() {
 showPost();
 
 function displayComments(data) {
-  const comments = document.querySelector(".comment-item");
+  const comments = document.querySelector(".comment-content");
+
   data.forEach((comment) => {
     comments.innerHTML += `
-    <div>
-    <img src="${comment.author_avatar_urls[96]}">
-      <h3>${comment.author_name}</h3>
-      <p>${comment.content.rendered}</p>
+    <div class="comment-item">
+      <div>
+        <img class="avatar-pic" src="${comment.author_avatar_urls[48]}">
+      </div>
+      <div>
+        <div>
+          <h3>${comment.author_name}</h3>
+        </div>
+        <div>
+          <p>${comment.content.rendered}</p>
+        </div>
+      </div>
     </div>
   `;
   });
@@ -105,7 +114,7 @@ async function sendComment() {
     content: commentMessage,
     post: postId,
   };
-  //console.log(comment);
+  // console.log(comment);
 
   try {
     const res = await fetch("https://runder.no/exam1/wp-json/wp/v2/comments", {
@@ -116,7 +125,7 @@ async function sendComment() {
       body: JSON.stringify(comment),
     });
     const data = await res.json();
-    //console.log(data);
+    console.log(data);
   } catch (error) {
     console.log("This is:", error);
     document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
@@ -124,7 +133,7 @@ async function sendComment() {
 }
 
 function postComment() {
-  const postItem = document.querySelector(".comment-item");
+  const postItem = document.querySelector(".comment-content");
   const postName = document.querySelector("#post-name").value;
   const postMessage = document.querySelector("#post-message").value;
 
