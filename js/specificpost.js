@@ -15,16 +15,16 @@ showPost();
 
 // Display Comment
 function displayComments(data) {
+  
   // Display None when No Comments
   if (!data.length) {
     const messageContainer = document.querySelector(".comment-content");
     messageContainer.classList.add("hide");
   }
 
-
-
   const comments = document.querySelector(".comment-content");
 
+  comments.innerHTML = "";
   data.forEach((comment) => {
     comments.innerHTML += `
     <div class="comment-item">
@@ -152,3 +152,4 @@ function postComment() {
 </div>
 `;
 }
+
