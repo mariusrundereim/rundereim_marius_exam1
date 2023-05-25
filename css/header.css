@@ -17,7 +17,6 @@
 }
 
 .pagelogo {
-  flex-grow: 1;
   align-self: center;
   z-index: 10;
 }
@@ -72,9 +71,8 @@
   }
 }
 
-
-
 .header-options {
+  cursor: pointer;
   min-width: 80px;
   display: flex;
   justify-content: space-around;
@@ -82,17 +80,17 @@
   z-index: 10;
 }
 
-.menu-toggle{
+.menu-toggle {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.menu-toggle::after{
+.menu-toggle::after {
   position: absolute;
   display: block;
   transform: translateY(3.5rem);
-  content: 'Menu';
+  content: "Menu";
   font-size: var(--font-m);
   text-transform: uppercase;
   writing-mode: vertical-lr;
@@ -101,11 +99,11 @@
 }
 
 @keyframes menu-bump {
-  0%{
+  0% {
     transform: translateY(3.5rem);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(3.5rem);
     opacity: 1;
   }
@@ -114,7 +112,7 @@
 .lightdark-icon,
 .menu--icon {
   color: var(--clr-light);
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 
 .open {
@@ -123,7 +121,6 @@
 
 .close {
   display: none;
-
 }
 
 .page-logo-image {

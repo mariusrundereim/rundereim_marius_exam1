@@ -10,9 +10,12 @@ async function getPosts() {
     carouselNavigation(data);
   } catch (error) {
     console.log("This is:", error);
-    document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
-  } finally {
-    console.log("Code that will run no matter what");
+    document.querySelector("body").innerHTML = `
+    <div class="error-flex">
+      <p>Beklager, noe feil har skjedd. Forsøk å kom tilbake senere.</p>
+      <code class="code-message">${error}</code>
+    </div>
+    `;
   }
 }
 getPosts();
@@ -65,7 +68,7 @@ function postCarousel(data) {
     cardDate.classList.add("date-prop");
     cardReadingTime.classList.add("reading-time-prop");
     cardImage.classList.add("image-prop");
-    cardTitle.classList.add("title-heading")
+    cardTitle.classList.add("title-heading");
 
     // Content
     cardDate.textContent = post.date.slice(0, 10);

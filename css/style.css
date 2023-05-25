@@ -42,7 +42,7 @@
 }
 
 .light-mode {
-  --clr-red: #e06c75;
+  --clr-red: #d93643;
   --clr-blue: #32adbd;
   --clr-light: var(--clr-dark);
   --clr-dark: var(--clr-light);
