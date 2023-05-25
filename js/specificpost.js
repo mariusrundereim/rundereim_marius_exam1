@@ -13,8 +13,8 @@ async function showPost() {
   const response = await fetch(commentUrl);
   const data = await response.json();
   console.log(data);
-  console.log(data[0].author_name);
-  console.log(data[0].content.rendered);
+  console.log(data[0].author_avatar_urls[24]);
+  console.log(data[0].date_gmt);
   displayComments(data);
 }
 showPost();
@@ -22,14 +22,14 @@ showPost();
 function displayComments(data) {
   const comments = document.querySelector(".comment-item");
   data.forEach((comment) => {
-    console.log(comment.content.rendered);
-    console.log(data[0]);
-  });
-
-  comments.innerHTML += `
-  <h3>${data[0].author_name}</h3>
-  <div>${data[0].content.rendered}</div>
+    comments.innerHTML += `
+    <div>
+    <img src="${comment.author_avatar_urls[96]}">
+      <h3>${comment.author_name}</h3>
+      <p>${comment.content.rendered}</p>
+    </div>
   `;
+  });
 }
 
 async function displayPost() {
@@ -122,7 +122,6 @@ async function sendComment() {
     document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
   }
 }
-sendComment();
 
 function postComment() {
   const postItem = document.querySelector(".comment-item");
