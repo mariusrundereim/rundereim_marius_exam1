@@ -3,33 +3,9 @@ const params = new URLSearchParams(queryString);
 const postId = params.get("id");
 
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/${postId}`;
-
-// Display Blog Post
-async function displayPost() {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    document.title = "Stylevault" + " - " + data.title.rendered;
-
-    console.log(response.ok);
-    if (response.ok == true) {
-      console.log("Siden funker");
-    } else {
-      console.log("Siden funker ikke");
-      document.querySelector("body").innerHTML = `<h1>Test</h1>`;
-    }
-
-    showContent(data);
-    popUp(data);
-  } catch (error) {
-    console.log("This is:", error);
-    //document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
-  }
-}
-displayPost();
+const commentUrl = `https://runder.no/exam1/wp-json/wp/v2/comments?post=${postId}`;
 
 // Show Comment Post
-const commentUrl = `https://runder.no/exam1/wp-json/wp/v2/comments?post=${postId}`;
 async function showPost() {
   const response = await fetch(commentUrl);
   const data = await response.json();
@@ -39,11 +15,12 @@ showPost();
 
 // Display Comment
 function displayComments(data) {
-  if (!data.length) {
-    console.log("HEI");
-    const messageContainer = document.querySelector(".comment-content");
-    messageContainer.classList.add("hide");
-  }
+  // if (!data.length) {
+  //   console.log("HEI");
+  //   const messageContainer = document.querySelector(".comment-content");
+  //   messageContainer.classList.add("hide");
+  // }
+
   const comments = document.querySelector(".comment-content");
 
   data.forEach((comment) => {
@@ -64,6 +41,22 @@ function displayComments(data) {
   `;
   });
 }
+
+// Display Blog Post
+async function displayPost() {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    document.title = "Stylevault" + " - " + data.title.rendered;
+
+    showContent(data);
+    popUp(data);
+  } catch (error) {
+    console.log("This is:", error);
+    document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
+  }
+}
+displayPost();
 
 function showContent(data) {
   const date = data.date.slice(0, 10);
@@ -122,7 +115,7 @@ async function sendComment() {
     content: commentMessage,
     post: postId,
   };
-  // console.log(comment);
+  console.log(comment);
 
   try {
     const res = await fetch("https://runder.no/exam1/wp-json/wp/v2/comments", {
@@ -133,19 +126,14 @@ async function sendComment() {
       body: JSON.stringify(comment),
     });
 
-    if (res.ok) {
-      console.log("ok");
-    }
     const data = await res.json();
-    console.log(data);
-    if (response.ok) {
-      console.log(data);
-    }
+    //console.log(data);
   } catch (error) {
     console.log("This is:", error);
     document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
   }
 }
+sendComment();
 
 function postComment() {
   const postItem = document.querySelector(".comment-content");
