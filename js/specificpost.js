@@ -15,11 +15,13 @@ showPost();
 
 // Display Comment
 function displayComments(data) {
-  // if (!data.length) {
-  //   console.log("HEI");
-  //   const messageContainer = document.querySelector(".comment-content");
-  //   messageContainer.classList.add("hide");
-  // }
+  // Display None when No Comments
+  if (!data.length) {
+    const messageContainer = document.querySelector(".comment-content");
+    messageContainer.classList.add("hide");
+  }
+
+
 
   const comments = document.querySelector(".comment-content");
 
