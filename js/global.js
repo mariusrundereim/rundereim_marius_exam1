@@ -28,13 +28,3 @@ function scrollTop() {
   });
 }
 scrollTop();
-
-// Header
-const currentPage = window.location.href;
-const navLinks = document.querySelectorAll(".nav-item a");
-
-for (let i = 0; i < navLinks.length; i++) {
-  if (navLinks[i].href === currentPage) {
-    navLinks[i].classList.add("active");
-  }
-}
