@@ -24,7 +24,7 @@
   cursor: pointer;
   width: fit-content;
   padding: var(--space-sm);
-  color: var(--clr-light);
+  color: var(--clr-dark);
   background: var(--clr-blue);
   border-radius: var(--radius-s);
   border: none;
@@ -32,6 +32,7 @@
 }
 
 .button-submit:hover {
+  color: white;
   background: var(--clr-red);
 }
 
@@ -92,6 +93,8 @@
 }
 
 .btn-prop {
+  font-size: 1rem;
+  font-family: "Schibsted Grotesk", sans-serif;
   display: inline-block;
   text-decoration: none;
 }
