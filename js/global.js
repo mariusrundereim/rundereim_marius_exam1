@@ -30,11 +30,11 @@ function scrollTop() {
 scrollTop();
 
 // Header
-const currentURL = window.location.href;
+const currentPage = window.location.href;
 const navLinks = document.querySelectorAll(".nav-item a");
 
 for (let i = 0; i < navLinks.length; i++) {
-  if (navLinks[i].href === currentURL) {
+  if (navLinks[i].href === currentPage) {
     navLinks[i].classList.add("active");
   }
 }
