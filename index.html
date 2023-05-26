@@ -48,7 +48,7 @@
     <script defer src="./js/populartags.js"></script>
   </head>
   <body>
-    <header class="top-header">
+    <header class="top-header" tabindex="0">
       <div class="header-wrap">
         <div class="top-level">
           <a
@@ -57,17 +57,17 @@
             href="index.html"
             alt="Page logo"
           ></a>
-          <div class="header-options">
-            <div class="lightdark-toggle">
+          <div class="header-options" tabindex="0">
+            <div class="lightdark-toggle" tabindex="1">
               <i class="fas fa-sun toggle-lightdark lightdark-icon"></i>
             </div>
-            <div class="menu-toggle">
+            <div class="menu-toggle" tabindex="1">
               <i class="fas fa-bars toggle-menu-open menu--icon"></i>
             </div>
           </div>
         </div>
 
-        <nav class="primary-nav">
+        <nav class="primary-nav" tabindex="1">
           <ul class="nav-list">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>

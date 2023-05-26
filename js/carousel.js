@@ -24,6 +24,7 @@ async function getPosts() {
 getPosts();
 
 const latestPosts = document.querySelector(".carousel-content");
+
 let index = 0;
 
 // Navigation
