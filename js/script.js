@@ -1,10 +1,24 @@
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
 
 async function getPosts() {
-  const response = await fetch(url);
-  const data = await response.json();
-  //console.log(data);
-  postCarousel(data);
+  try {
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const data = await response.json();
+      postCarousel(data);
+    } else {
+      console.log("Response not OK");
+    }
+  } catch (error) {
+    console.log("This is:", error);
+    document.querySelector("body").innerHTML = `
+    <div class="error-flex">
+      <p>Utvikleren klør seg virkelig i hode nå. Straks tilbake</p>
+      <code class="code-message">${error}</code>
+    </div>
+    `;
+  }
 }
 getPosts();
 

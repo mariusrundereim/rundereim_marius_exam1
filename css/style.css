@@ -155,6 +155,12 @@ p {
   color: var(--clr-red);
 }
 
+.subtitle-font-light {
+  color: var(--clr-light);
+  font-size: var(--font-s);
+  font-weight: 400;
+}
+
 .latest-posts {
   display: flex;
   flex-direction: column;
@@ -183,8 +189,17 @@ p {
   min-height: 20rem;
 }
 
+.hero-title::before {
+  content: "Get better at what you love to do";
+  display: block;
+  font-size: var(--font-m);
+  font-weight: 400;
+  color: var(--clr-light);
+  margin-bottom: var(--space-m);
+}
+
 .hero-title {
-  font-size: var(--font-xl);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
   color: var(--clr-blue);
 }

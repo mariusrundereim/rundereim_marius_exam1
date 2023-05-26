@@ -3,11 +3,14 @@ const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
 async function getPosts() {
   try {
     const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-
-    postCarousel(data);
-    carouselNavigation(data);
+    if (response.ok) {
+      const data = await response.json();
+      postCarousel(data);
+      carouselNavigation(data);
+      console.log("Response OK");
+    } else {
+      console.log("Response not OK");
+    }
   } catch (error) {
     console.log("This is:", error);
     document.querySelector("body").innerHTML = `

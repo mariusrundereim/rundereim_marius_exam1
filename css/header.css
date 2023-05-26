@@ -109,10 +109,22 @@
   }
 }
 
-.lightdark-icon,
+.lightdark-icon {
+  color: var(--clr-light);
+  font-size: 1.7rem;
+}
+
+.lightdark-icon:hover {
+  color: var(--clr-red);
+}
+
 .menu--icon {
   color: var(--clr-light);
   font-size: 1.7rem;
+}
+
+.menu--icon:hover {
+  color: var(--clr-red);
 }
 
 .open {

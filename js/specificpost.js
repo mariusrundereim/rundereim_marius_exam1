@@ -7,9 +7,16 @@ const commentUrl = `https://runder.no/exam1/wp-json/wp/v2/comments?post=${postId
 
 // Show Comment Post
 async function showPost() {
-  const response = await fetch(commentUrl);
-  const data = await response.json();
-  displayComments(data);
+  try {
+    const response = await fetch(commentUrl);
+    if (response.ok) {
+      const data = await response.json();
+      displayComments(data);
+      console.log(data);
+    }
+  } catch (error) {
+    console.log("This is:", error);
+  }
 }
 showPost();
 
@@ -31,12 +38,8 @@ function displayComments(data) {
         <img class="avatar-pic" src="${comment.author_avatar_urls[48]}">
       </div>
       <div>
-        <div>
-          <h3>${comment.author_name}</h3>
-        </div>
-        <div>
-          <p>${comment.content.rendered}</p>
-        </div>
+        <h3>${comment.author_name}</h3>
+        <p>${comment.content.rendered}</p>
       </div>
     </div>
   `;

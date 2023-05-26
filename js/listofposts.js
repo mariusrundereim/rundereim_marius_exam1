@@ -1,28 +1,35 @@
-//
-//
 let currentPage = 1;
 const postsPerPage = 10;
 let allPosts = [];
 
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/?per_page=22`;
+document.title = "Stylevault" + " - " + "All Posts";
 
 const urlParams = new URLSearchParams(window.location.search);
-
 const searchBar = document.querySelector("#search-bar");
 const content = document.querySelector(".all-posts");
 
 async function allBlogPosts() {
   try {
     const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    allPosts = data;
-    document.title = "Stylevault" + " - " + "All Posts";
-    searchForPosts(allPosts);
-    displayPosts(allPosts);
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+      allPosts = data;
+      searchForPosts(allPosts);
+      displayPosts(allPosts);
+    } else {
+      console.log("Response not OK");
+    }
   } catch (error) {
     console.log("This is:", error);
-    document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
+    document.querySelector("body").innerHTML = `
+    <div class="error-flex">
+      <p>Utvikleren klør seg virkelig i hode nå. Straks tilbake</p>
+      <code class="code-message">${error}</code>
+    </div>
+    `;
   }
 }
 allBlogPosts();
@@ -30,7 +37,6 @@ allBlogPosts();
 // Search for Posts
 function searchForPosts(data) {
   const searchBar = document.querySelector("#search-bar");
-
   searchBar.addEventListener("keyup", (e) => {
     applyFilters(e.target.value);
   });
