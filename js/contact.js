@@ -58,7 +58,7 @@ function checkName(name) {
   const messageName = document.querySelector("#contact-name");
   if (name === "") {
     showMessage(errorDisplay, "error", "Name cannot be blank");
-  } else if (name.length < 5) {
+  } else if (name.length > 5) {
     showMessage(
       errorDisplay,
       "error",
@@ -80,7 +80,7 @@ function checkEmail(email) {
 function checkSubject(subject) {
   if (subject === "") {
     showMessage(errorDisplay, "error", "Subject cannot be blank");
-  } else if (subject.length <= 15) {
+  } else if (subject.length > 15) {
     showMessage(
       errorDisplay,
       "error",
@@ -93,7 +93,7 @@ function checkSubject(subject) {
 function checkMessage(message) {
   if (message === "") {
     showMessage(errorDisplay, "error", "Message cannot be blank");
-  } else if (message.length <= 25) {
+  } else if (message.length > 25) {
     showMessage(
       errorDisplay,
       "error",
