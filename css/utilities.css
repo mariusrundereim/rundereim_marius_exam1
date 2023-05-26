@@ -1,3 +1,9 @@
+/* Page Current */
+
+.active {
+  color: var(--clr-white);
+}
+
 /* Message */
 
 .message-container {
