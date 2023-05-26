@@ -60,58 +60,6 @@ body {
   min-height: 100vh;
 }
 
-/* Loader */
-
-.loader {
-  width: min(100% - 2rem, 5rem);
-  margin: 0 auto;
-}
-
-.loader-dots {
-  width: 100%;
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  animation: rotate-spin 2s infinite;
-}
-
-@keyframes rotate-spin {
-  0% {
-    transform: rotate(0deg);
-
-    scale: 0;
-  }
-  50% {
-    transform: rotate(180deg);
-    scale: 2;
-  }
-
-  100% {
-    transform: rotate(360deg);
-    scale: 0;
-  }
-}
-
-.loader-dot-1 {
-  width: 20px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--clr-red);
-  /**/
-  animation: loader-dot-1 1s infinite ease-in-out;
-}
-
-.loader-dot-2 {
-  width: 20px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--clr-blue);
-  /**/
-  animation: loader-dot-2 1s infinite ease-in-out;
-}
-
 /* Fonts */
 
 h1,
@@ -145,12 +93,6 @@ p {
 }
 
 /****** HOME ******/
-
-.flexx {
-  display: flex;
-  align-items: center;
-  gap: var(--space-l);
-}
 
 /* Carousel */
 
@@ -453,29 +395,31 @@ p {
   /* min-height: 10rem; */
 }
 
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
 .textfield {
   width: 100%;
+  font-size: 1rem;
+  font-family: "Schibsted Grotesk", sans-serif;
+  background: var(--clr-dark);
+  border: 1px solid var(--clr-dark-2);
 }
 
 .textfield-message {
+  padding: 3px;
+  font-size: 1rem;
+  font-family: "Schibsted Grotesk", sans-serif;
   resize: none;
   width: 100%;
   min-height: 10rem;
+  background: var(--clr-dark);
+  border: 1px solid var(--clr-dark-2);
 }
 
 .c-requirements {
   padding: var(--space-l);
-}
-
-.error-label-start {
-  visibility: hidden;
-  transform: rotate(0deg);
-  transform: scale(0);
-  transition: 1s;
-}
-
-.error-label-show {
-  visibility: unset;
-  transform: rotate(-2deg);
-  transform: scale(1);
 }

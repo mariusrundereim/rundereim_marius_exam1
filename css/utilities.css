@@ -51,6 +51,58 @@
   display: none;
 }
 
+/* Loader */
+
+.loader {
+  width: min(100% - 2rem, 5rem);
+  margin: 0 auto;
+}
+
+.loader-dots {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  animation: rotate-spin 2s infinite;
+}
+
+@keyframes rotate-spin {
+  0% {
+    transform: rotate(0deg);
+
+    scale: 0;
+  }
+  50% {
+    transform: rotate(180deg);
+    scale: 2;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    scale: 0;
+  }
+}
+
+.loader-dot-1 {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--clr-red);
+  /**/
+  animation: loader-dot-1 1s infinite ease-in-out;
+}
+
+.loader-dot-2 {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--clr-blue);
+  /**/
+  animation: loader-dot-2 1s infinite ease-in-out;
+}
+
 /* Error Handling Message */
 
 .code-message {

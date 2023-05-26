@@ -77,6 +77,6 @@ function checkContactForm() {
       "Message must be more than 25 characters long"
     );
   }
-
-  // Send
 }
+
+function validateForm() {}

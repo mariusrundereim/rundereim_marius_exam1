@@ -22,6 +22,7 @@
 
 .button-submit {
   cursor: pointer;
+  width: fit-content;
   padding: var(--space-sm);
   color: var(--clr-light);
   background: var(--clr-blue);
