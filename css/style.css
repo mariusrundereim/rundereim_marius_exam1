@@ -343,13 +343,13 @@ p {
 
 .comment-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: var(--space-m);
   padding: 1rem;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .comment-item {
     flex-direction: column;
     align-items: flex-start;
