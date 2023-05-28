@@ -5,6 +5,7 @@ const postId = params.get("id");
 const url = `https://runder.no/exam1/wp-json/wp/v2/tricks/${postId}`;
 const commentUrl = `https://runder.no/exam1/wp-json/wp/v2/comments?post=${postId}`;
 
+
 // Show Comment Post
 async function showPost() {
   try {
@@ -15,10 +16,10 @@ async function showPost() {
       console.log(data);
     }
   } catch (error) {
-    console.log("This is:", error);
+    console.log("Error:", error);
   }
 }
-showPost();
+showPost()
 
 // Display Comment
 function displayComments(data) {
@@ -131,8 +132,13 @@ async function sendComment() {
         }
       );
 
-      const data = await res.json();
-      //console.log(data);
+      if(res.ok){
+      await res.json();
+        showPost()
+        commentContainer.reset()
+      } else{
+        console.log("Fail post comment")
+      }
     } catch (error) {
       console.log("This is:", error);
       document.querySelector("body").innerHTML = `<h1>${error}</h1>`;
