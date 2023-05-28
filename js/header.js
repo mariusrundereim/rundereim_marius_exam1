@@ -9,17 +9,20 @@ menuToggle.addEventListener("click", () => {
 
 function menuOpenClose() {
   const menuIcon = document.querySelector(".menu-toggle");
-  if (!menuIcon) {
-    navigation.classList.toggle("close");
-    menuIcon.innerHTML = `<i class="fas fa-times menu--icon"></i>`;
+  if (!menuOpen) {
+    navigation.classList.add("close");
+    menuIcon.innerHTML = `<i class="fas fa-bars menu--icon"></i>`;
     menuOpen = true;
   } else {
-    navigation.classList.toggle("close");
-    menuIcon.innerHTML = `<i class="fas fa-bars menu--icon"></i>`;
+    navigation.classList.remove("close");
+
+    menuIcon.innerHTML = `<i class="fas fa-times menu--icon"></i>`;
     menuOpen = false;
   }
 }
+
 menuOpenClose();
+
 
 // Toggle light/dark mode functionality
 

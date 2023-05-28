@@ -32,6 +32,8 @@
   animation: nav-fade-in 1s forwards;
 }
 
+
+
 @keyframes nav-fade-in {
   0% {
     opacity: 0;
@@ -108,6 +110,8 @@
     opacity: 1;
   }
 }
+
+
 
 .lightdark-icon {
   color: var(--clr-light);

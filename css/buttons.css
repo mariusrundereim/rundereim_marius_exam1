@@ -23,17 +23,19 @@
 .button-submit {
   cursor: pointer;
   width: fit-content;
+  font-weight: 500;
+  font-size: 1.1rem;
   padding: var(--space-sm);
   color: var(--clr-dark);
-  background: var(--clr-blue);
+  background: var(--clr-light);
   border-radius: var(--radius-s);
-  border: none;
+  border: 1px solid var(--clr-dark-2);
   transition: var(--trans-1);
 }
 
 .button-submit:hover {
   color: white;
-  background: var(--clr-red);
+  background: var(--clr-blue);
 }
 
 /* Show more */
