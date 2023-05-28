@@ -63,7 +63,7 @@ function checkName(name) {
     showMessage(
       messageName,
       "success",
-      "Name is more than 5 characters long"
+      "Name is correct"
     );
   }
 }

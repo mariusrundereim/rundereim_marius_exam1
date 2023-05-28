@@ -107,10 +107,7 @@ function displayPosts(posts) {
 
   document.querySelector(".all-posts").innerHTML = html;
 
-  // Popular tags
-  //const tagTitle = sessionStorage.getItem("tagTitle");
-  //document.getElementById("search-bar").value = tagTitle;
-  //sessionStorage.removeItem("tagTitle");
+
 
   // Add load more button
   const totalPosts = posts.length;

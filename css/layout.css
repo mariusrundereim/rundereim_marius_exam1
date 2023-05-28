@@ -1,25 +1,4 @@
-.main-wrapper {
-  width: min(100% - 2rem, 98rem);
-  margin-inline: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 
-.main-wrapper-blog {
-  width: min(100% - 2rem, 60rem);
-  margin-inline: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.main-wrapper-contact {
-  width: min(100% - 2rem, 40rem);
-  margin-inline: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* Updated */
 .main-wrap{
   margin-inline: auto;
   margin-top: 2rem;
