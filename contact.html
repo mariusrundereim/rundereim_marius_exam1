@@ -83,63 +83,64 @@
         </nav>
       </div>
     </header>
-    <main class="main-wrapper">
+    <main class="main-wrapper-contact">
       <section class="section-title flex-center">
         <h1 class="title-font">Contact</h1>
       </section>
-      <section class="grid-autofit">
-        <div class="col--1">
-          <h3>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-            voluptatem error beatae deleniti quos et earum veniam amet?
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur, harum! Maiores labore voluptatum fuga modi, quam
-            perferendis vitae quo id!
-          </p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <form class="form-contact" id="contact-form">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" class="textfield" id="first-name" name="fname" />
-            <div class="error-label" id="contact-name"></div>
-            <div class="message-container"></div>
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" class="textfield" id="email" name="email" />
-            <div class="error-label" id="email-display"></div>
-            <div class="message-container"></div>
-          </div>
-          <div>
-            <label for="subject">Subject:</label>
-            <input
-              type="text"
-              class="textfield"
-              name="textfield"
-              id="contact-subject"
-            />
-            <div class="error-label" id="subject-display"></div>
-            <div class="message-container"></div>
-          </div>
-          <div>
-            <label for="message">Message:</label>
-            <textarea
-              name="message"
-              class="textfield-message"
-              id="contact-message"
-            ></textarea>
-            <div class="error-label" id="message-display"></div>
-            <div class="message-container"></div>
-          </div>
-          <div>
-            <button class="button-submit" type="submit" id="contact-submit">
-              Send
-            </button>
-          </div>
-        </form>
+      <section class="flex-gap">
+        <h3 class="subtitle-font-light">
+          We're delighted that you've taken the time to reach out to us. Whether you have a question, feedback, or simply want to say hello, we're here to listen and provide the assistance you need. Our team is committed to ensuring a seamless and enjoyable experience for every visitor.
+        </h3>
+        <p>
+          At StyleVault, we value open communication and believe in the power of connections. We understand that sometimes it's easier to express yourself through writing, so we've provided a convenient contact form below. Simply fill in the required fields, and we'll get back to you as soon as possible.
+        </p>
+        <p>If you have any tips or suggestions related to CSS (Cascading Style Sheets), we'd love to hear from you! CSS plays a crucial role in web design, and we appreciate the input and expertise of our visitors. Whether it's a handy trick, a creative use case, or a best practice, we welcome your insights to share with our community.</p>
+
+        <section class="form-container">
+          <h2 class="subtitle-font">Reach us:</h2>
+          <form class="form-contact" id="contact-form">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" class="textfield" id="first-name" name="fname" />
+              <div class="error-label" id="contact-name"></div>
+              <div class="message-container"></div>
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" class="textfield" id="email" name="email" />
+              <div class="error-label" id="email-display"></div>
+              <div class="message-container"></div>
+            </div>
+            <div>
+              <label for="subject">Subject:</label>
+              <input
+                type="text"
+                class="textfield"
+                name="textfield"
+                id="contact-subject"
+              />
+              <div class="error-label" id="subject-display"></div>
+              <div class="message-container"></div>
+            </div>
+            <div>
+              <label for="message">Message:</label>
+              <textarea
+                name="message"
+                class="textfield-message"
+                id="contact-message"
+              ></textarea>
+              <div class="error-label" id="message-display"></div>
+              <div class="message-container"></div>
+            </div>
+            <div>
+              <button class="button-submit" type="submit" id="contact-submit">
+                Send
+              </button>
+            </div>
+            <div class="success-container"></div>
+          </form>
+        </section>
+        
       </section>
     </main>
     <footer>

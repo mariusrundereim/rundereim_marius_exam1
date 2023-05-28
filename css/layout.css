@@ -3,7 +3,6 @@
   margin-inline: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  flex-grow: 1;
 }
 
 .main-wrapper-blog {
@@ -13,9 +12,41 @@
   margin-bottom: 2rem;
 }
 
+.main-wrapper-contact {
+  width: min(100% - 2rem, 40rem);
+  margin-inline: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Updated */
+.main-wrap{
+  margin-inline: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.width-main {
+  width: min(100% - 2rem, 98rem);
+}
+
+.width-blog{
+  width: min(100% - 2rem, 60rem);
+}
+
+.width-contact{
+  width: min(100% - 2rem, 40rem);
+}
+
 .flex-center {
   display: flex;
   align-items: center;
+  gap: var(--space-l);
+}
+
+.flex-gap{
+  display: flex;
+  flex-direction: column;
   gap: var(--space-l);
 }
 

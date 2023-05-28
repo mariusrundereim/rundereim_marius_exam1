@@ -5,23 +5,15 @@ const form = document.querySelector("#contact-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  errorDisplay.innerHTML = "";
-  if (validateForm()) {
-    form.innerHTML += `<div>Form is Sent</div>`;
-  }
+  validateForm()
 });
 
-// Error Container
+// Error & Success Container
 const errorDisplay = document.querySelector(".message-container");
-const messageEmail = document.querySelector("#email-display");
-const messageSubject = document.querySelector("#subject-display");
-const messageMessage = document.querySelector("#message-display");
-
-//Succes
 const successDisplay = document.querySelector(".success-container");
 
 function showMessage(container, type, message) {
-  container.innerHTML += `<div class="message ${type}">${message}</div>`;
+  container.innerHTML = `<div class="message ${type}">${message}</div>`;
 }
 
 // Validate Form
@@ -60,47 +52,71 @@ function validateForm() {
 function checkName(name) {
   const messageName = document.querySelector("#contact-name");
   if (name === "") {
-    showMessage(errorDisplay, "error", "Name cannot be blank");
-  } else if (name.length > 5) {
+    showMessage(messageName,"error", "Name cannot be blank");
+  } else if (name.length < 5) {
     showMessage(
-      errorDisplay,
+      messageName,
       "error",
       "Name must be more than 5 characters long"
+    );
+  } else if(name.length > 5){
+    showMessage(
+      messageName,
+      "success",
+      "Name is more than 5 characters long"
     );
   }
 }
 
 // Email
 function checkEmail(email) {
+  const messageEmail = document.querySelector("#email-display");
   if (email === "") {
-    showMessage(errorDisplay, "error", "Email cannot be blank");
+    showMessage(messageEmail, "error", "Email cannot be blank");
   } else if (!isEmail(email)) {
-    showMessage(errorDisplay, "error", "Email must be valid");
+    showMessage(messageEmail, "error", "Email must be valid");
+  } else if (isEmail(email)) {
+    showMessage(messageEmail, "success", "Email is valid");
   }
 }
 
 // Subject
 function checkSubject(subject) {
+  const messageSubject = document.querySelector("#subject-display");
   if (subject === "") {
-    showMessage(errorDisplay, "error", "Subject cannot be blank");
-  } else if (subject.length > 15) {
+    showMessage(messageSubject, "error", "Subject cannot be blank");
+  } else if (subject.length < 15) {
+    console.log(subject.length)
     showMessage(
-      errorDisplay,
+      messageSubject,
       "error",
       "Subject must be more than 15 characters"
+    );
+  } else if (subject.length > 15){
+    showMessage(
+      messageSubject,
+      "success",
+      "Subject has more than 15 characters"
     );
   }
 }
 
 // Message
 function checkMessage(message) {
+  const messageMessage = document.querySelector("#message-display");
   if (message === "") {
-    showMessage(errorDisplay, "error", "Message cannot be blank");
-  } else if (message.length > 25) {
+    showMessage(messageMessage, "error", "Message cannot be blank");
+  } else if (message.length < 25) {
     showMessage(
-      errorDisplay,
+      messageMessage,
       "error",
       "Message must be more than 25 characters"
+    );
+  } else if (message.length > 25) {
+    showMessage(
+      messageMessage,
+      "success",
+      "Message is now more than 25 characters"
     );
   }
 }

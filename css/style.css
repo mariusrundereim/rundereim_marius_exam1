@@ -434,14 +434,14 @@ p {
 
 /****** CONTACT ******/
 
-.form-contact {
+
+
+.form-container {
   display: flex;
   flex-direction: column;
   gap: var(--space-l);
-
-  border-radius: var(--radius-m);
-  padding: var(--space-m);
-  /* min-height: 10rem; */
+  width: min(100%, 44rem);
+  margin-inline: auto;
 }
 
 .comment-container {
